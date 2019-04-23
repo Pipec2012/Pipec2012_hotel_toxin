@@ -31,7 +31,7 @@ module: {
         test: /\.pug$/,
         loader:'pug-loader',
         options: {
-            pretty: true
+            pretty: true,
         }
     },
     {
@@ -92,12 +92,23 @@ module: {
 
     plugins: [
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
-            template: PATH.source + '/index.pug'
+            template: PATH.source + '/ui_kit.pug',
+            filename: './ui_kit.html',
         }),
+       new HtmlWebpackPlugin({
+           inject: false,
+           // hash: true,
+           template: PATH.source + '/index.pug',
+           filename: './index.html',
+           
+       }),
         new MiniCssExtractPlugin({
             filename: "style.css",
+        }),
+        new MiniCssExtractPlugin({
+            filename: "ui_kit.css",
         }),
         // new CopyWebpackPlugin([
         //     {from: PATH.source + '/img',to: `./img`},
