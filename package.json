@@ -4,9 +4,9 @@
   "description": "https://github.com/Pipec2012/",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "develop": "webpack --mode development",
-    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --open",
+    "prod": "webpack -p",
+    "develop": "webpack -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
