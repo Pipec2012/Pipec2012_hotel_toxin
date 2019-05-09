@@ -1,29 +1,12 @@
 {
-  "name": "Hotel toxin",
+  "name": "hotel_toxin",
   "version": "1.0.0",
-  "description": "https://github.com/Pipec2012/",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack-dev-server --open",
-    "prod": "webpack -p",
-    "develop": "webpack -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Pipec2012/"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Pipec2012/"
-  },
-  "homepage": "https://github.com/Pipec2012/",
+  "description": "",
+  "main": "webpack.config.js",
   "dependencies": {
+    "fsevents": "^1.2.9",
     "jquery": "^3.4.1",
-    "node-libpng": "^0.2.7",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^2.0.1",
@@ -44,5 +27,21 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "prod": "webpack -p",
+    "develop": "webpack -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pipec2012/Pipec2012_hotel_toxin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pipec2012/Pipec2012_hotel_toxin/issues"
+  },
+  "homepage": "https://github.com/Pipec2012/Pipec2012_hotel_toxin#readme"
 }
