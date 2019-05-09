@@ -1,5 +1,5 @@
 {
-  "name": "-summary",
+  "name": "Hotel toxin",
   "version": "1.0.0",
   "description": "https://github.com/Pipec2012/",
   "main": "index.js",
@@ -11,17 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pipec2012/-summary.git"
+    "url": "git+https://github.com/Pipec2012/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pipec2012/-summary/issues"
+    "url": "https://github.com/Pipec2012/"
   },
-  "homepage": "https://github.com/Pipec2012/-summary#readme",
+  "homepage": "https://github.com/Pipec2012/",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
+    "node-libpng": "^0.2.7",
     "popper.js": "^1.14.7"
   },
   "devDependencies": {

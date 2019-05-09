@@ -1,0 +1,35 @@
+mixin color(options)
+	-	var colorClassName = options.color
+
+	.colors
+		.colors__square(class = colorClassName)
+		.colors__header
+			h3= options.title
+			p= options.text
+
+.colors_column
+	+color({color: "black", title: "Dark Shade 100%", text: "#1F2041"})
+	+color({color: "black--75", title: "Dark Shade 75%", text: "#1F2041"})
+	+color({color: "black--50", title: "Dark Shade 50%", text: "#1F2041"})
+	+color({color: "black--25", title: "Dark Shade 25%", text: "#1F2041"})
+	+color({color: "black--5", title: "Dark Shade 5%", text: "#1F2041"})
+	+color({color: "purple", title: "Purple", text: "#BC9CFF"})
+	+color({color: "green", title: "Green", text: "#6FCF97"})
+
+.type_column
+	ul.type__name
+		li.name__h1 H1
+		li.name__h2 H2
+		li.name__h3 H3
+		li Body
+	ul.type__text
+		li 
+			h1 This one is the sub-section or widget title
+		li 
+			h2 Next one is the item title inside widgets
+		li
+			h3 This is a label or CTA text
+		li This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+		
+	
