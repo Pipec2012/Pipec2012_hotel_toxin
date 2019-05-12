@@ -1,13 +1,4 @@
-mixin text_field(options)
-    
-    //- - var x = options.type
-    if options.type == undefined
-        .text-field
-            legend= options.title
-            input(type= "text" placeholder= options.placeholder required)
-    else if options.type != undefined
-        .text-field
-            legend= options.title
-            input(type= options.type placeholder= options.placeholder required)
+include ./text_field/text_field
 
-+text_field({title: "Text field", type:"e-mail", placeholder:"Email"})
+
++text_field({title: "Text field", type:"email", placeholder: "Email"})

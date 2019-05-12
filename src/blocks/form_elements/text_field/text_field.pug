@@ -1,0 +1,22 @@
+mixin text_field(options)
+    
+	-
+		var inputClassName = ""
+		inputClassName += options.isDate ? " mask-date" : ""
+	
+	if options.type == undefined
+		.text-field
+			legend= options.title
+			input(class = inputClassName)(type= "text" placeholder= options.placeholder required)   
+			if options.subscript == none
+			else
+					a(href="#")
+						i.material-icons arrow_forward
+	else 
+		.text-field
+			legend= options.title
+			input(class = inputClassName)(type= options.type placeholder=  options.placeholder required)
+			if options.subscript == none
+			else
+					a(href="#")
+						i.material-icons arrow_forward

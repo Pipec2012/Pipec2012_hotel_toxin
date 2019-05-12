@@ -5,7 +5,6 @@ placeholder-input(color)
     color color
 
 
-
 .text-field legend 
     font-family: $bold
 input 
@@ -14,11 +13,10 @@ input
     border: 1px solid $black--25
     box-sizing: border-box;
     border-radius: 4px
-    padding: 13px 15px
+    padding: 13px 35px 13px 15px
     margin-top: 15px
 
-input::-webkit-input-placeholder { color:$black--25 }
-input::-moz-placeholder { color:$black--25 }
+placeholder-input($black--25)
 
 input:hover, :focus
     border: 1px solid $black--50
@@ -26,4 +24,12 @@ input:hover, :focus
 
 input:hover::-webkit-input-placeholder { color:$black--75 }
 input:hover::-moz-placeholder { color:$black--75 }
+input:focus::-webkit-input-placeholder { color:$black--75 }
+input:focus::-moz-placeholder { color:$black--75 }
 
+.material-icons
+    background: linear-gradient(#BC9CFF, #8BA4F9)
+    -webkit-background-clip: text
+    color: transparent 
+    vertical-align: middle
+    margin-left -3.5vw
