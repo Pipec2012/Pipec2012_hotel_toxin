@@ -13,12 +13,14 @@
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.6.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "pug": "^2.0.3",
+    "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
@@ -30,7 +32,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "prod": "webpack -p",
+    "prod": "webpack -d",
     "develop": "webpack -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

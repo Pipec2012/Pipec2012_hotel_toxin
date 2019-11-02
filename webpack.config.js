@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-
 const webpack = require('webpack');
 const PATH = {
     source: path.join(__dirname, 'src'),
@@ -28,12 +27,17 @@ module: {
         ],
     },
     {
-        test: /\.pug$/,
-        loader:'pug-loader',
-        options: {
-            pretty: true
-        }
+        include: /\.pug/,
+        loader: ['html-loader','pug-html-loader'],
+        
     },
+    // {
+    //     test: /\.pug$/,
+    //     loader:'pug-loader',
+    //     options: {
+    //         pretty: true
+    //     }
+    // },
     {
         test: /\.(eot|ttf|svg|woff|woff2|otf)$/,
         exclude: /img/,
@@ -115,11 +119,11 @@ module: {
         new CleanWebpackPlugin({
             verbose: true
         }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
-        }),
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     'window.jQuery': 'jquery'
+        // }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),

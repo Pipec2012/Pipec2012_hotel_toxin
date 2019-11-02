@@ -8,7 +8,7 @@ mixin text_field(options)
 		.text-field
 			legend= options.title
 			input(class = inputClassName)(type= "text" placeholder= options.placeholder required)   
-			if options.subscript == none
+			if options.btn_arrow == none
 			else
 					a(href="#")
 						i.material-icons arrow_forward
@@ -16,7 +16,7 @@ mixin text_field(options)
 		.text-field
 			legend= options.title
 			input(class = inputClassName)(type= options.type placeholder=  options.placeholder required)
-			if options.subscript == none
+			if options.btn_arrow == none
 			else
 					a(href="#")
 						i.material-icons arrow_forward

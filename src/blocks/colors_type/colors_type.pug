@@ -2,12 +2,12 @@ mixin color(options)
 	-	var colorClassName = options.color
 
 	.colors
-		.colors__square(class = colorClassName)
-		.colors__header
+		.color__square(class = colorClassName)
+		.color__header
 			h3= options.title
 			p= options.text
 
-.colors_column
+.color_column
 	+color({color: "black", title: "Dark Shade 100%", text: "#1F2041"})
 	+color({color: "black--75", title: "Dark Shade 75%", text: "#1F2041"})
 	+color({color: "black--50", title: "Dark Shade 50%", text: "#1F2041"})
