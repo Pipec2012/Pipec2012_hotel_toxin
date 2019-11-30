@@ -1,6 +1,24 @@
+mixin dropdown(options)
+	.dropdown
+		.dropdown_head
+			.dropdown_title Сколько гостей
+			i.material-icons.dropdown_arrow expand_more
+		ul.dropdown_options.dropdown--hidden
+
+
+			- var x = options.num
+			-	for (var a = 0; a<x; a++) {
+				li.option
+				span= options.name
+				.calc
+					span.option_btn#btn_minus -
+					input#quantity(type="text" value="0")
+					span.option_btn#btn_plus +
+			- }
+
 .dropdown
-	.dropdown_title
-		input(type="text"  placeholder="Сколько гостей")
+	.dropdown_head
+		.dropdown_title Сколько гостей
 		i.material-icons.dropdown_arrow expand_more
 	ul.dropdown_options.dropdown--hidden
 		li.option

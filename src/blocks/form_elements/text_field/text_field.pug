@@ -10,13 +10,13 @@ mixin text_field(options)
 			input(class = inputClassName)(type= "text" placeholder= options.placeholder required)   
 			if options.btn_arrow == none
 			else
-					a(href="#")
-						i.material-icons arrow_forward
+				a(href="#")
+					i.material-icons arrow_forward
 	else 
 		.text-field
 			legend= options.title
 			input(class = inputClassName)(type= options.type placeholder=  options.placeholder required)
 			if options.btn_arrow == none
 			else
-					a(href="#")
-						i.material-icons arrow_forward
+				a(href="#")
+					i.material-icons.text-field_arrow arrow_forward

@@ -3,22 +3,30 @@
    border: 1px solid $black--50
    border-radius: 50%  
    cursor pointer
-   height 25px
-   width 25px
+   height 30px
+   width 30px
    text-align: center
-   padding: 3px
    color: $black--50
    font-size: 1.5rem
-.dropdown_title
+.dropdown_head
    display flex
    align-items: center
    justify-content space-between
+   width: 266px
+   border: 1px solid $black--25
+   box-sizing: border-box;
+   border-radius: 4px 4px 0 0;
+   padding: 10px 12px 
+   color: $black--75
+.dropdown_head:hover
+   border: 1px solid $black--50
+.dropdown--active
+   border: 1px solid $black--50
 .dropdown_arrow
-   margin-left -55px
    cursor pointer
 .dropdown_options
    width: 266px
-   border: 1px solid $black--25
+   border: 1px solid $black--50
    box-sizing: border-box;
    border-radius: 0 0 4px 4px;
    padding: 13px 12px 13px 12px
@@ -42,18 +50,16 @@
    overflow: hidden;
    opacity: 0;
 
-input 
-   width: 266px
-   // height: 44px
-   border: 1px solid $black--25
-   box-sizing: border-box;
-   border-radius: 4px 4px 0 0;
-   padding: 13px 35px 13px 15px
-   margin-top: 15px
+// .dropdown_title 
+   
+   
 .option 
    display flex
    align-items: center
    justify-content space-between
+   font-weight: bold
+   font-size: 12px
+   text-transform: uppercase
 .calc
    display flex
    align-items: center
@@ -69,7 +75,12 @@ input
    display flex
    align-items: center
    justify-content space-between
+   font-weight: bold
+   font-size: 12px
+   text-transform: uppercase
    span 
       cursor pointer
 .select
-   color red
+   color $purple
+.clear
+   color: $black--50
