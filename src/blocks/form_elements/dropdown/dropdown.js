@@ -1,35 +1,24 @@
 
+var dropdownArrow = document.querySelectorAll('.dropdown_arrow');
 
-// var dropOpen = document.querySelector('.dropdown_arrow');
-// dropOpen.onclick = open_close;
-
-
-// function open_close() {
-//    var open = document.querySelector('.dropdown--hidden');
-//    var b = document.querySelector('.dropdown_head');
-//    if (open != undefined) {
-//       b.classList.add('dropdown--active');
-//       open.classList.remove('dropdown--hidden');
-//       console.log('клик')
-//    } else {
-//       var close = document.querySelector('.dropdown_options');
-//       close.classList.add('dropdown--hidden');
-//       b.classList.remove('dropdown--active');
-//    }
-   
-   
-// }
-
-
-var dropdown_items = document.querySelectorAll('.dropdown_arrow');
-
-dropdown_items.forEach ((elem) => {
-   elem.onclick = open_close;
-
-
+dropdownArrow.forEach((element) => {
+   element.onclick = showDropdown;
 });
+
+function showDropdown() {
+
    
-function open_close() {
-   console.log('Клик');
-   
+   var dropdown_body = this.parentElement.nextSibling;
+   let checkClass = dropdown_body.classList.contains('dropdown--hidden');
+
+      
+      var dropdown_head = this.parentElement;
+      if (checkClass) {
+         dropdown_head.classList.add('dropdown--active');
+         dropdown_body.classList.remove('dropdown--hidden');
+      } else {
+         dropdown_body.classList.add('dropdown--hidden');
+         dropdown_head.classList.remove('dropdown--active');
+      }
+      
 }
