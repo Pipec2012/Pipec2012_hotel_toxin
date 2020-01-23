@@ -1,4 +1,4 @@
-mixin dropdown(options)
+mixin dropdown(...names)
 	.dropdown
 		.dropdown_head
 			.dropdown_title Сколько гостей
@@ -6,96 +6,16 @@ mixin dropdown(options)
 		ul.dropdown_options.dropdown--hidden
 
 
-			- var x = options.num
-			-	for (var a = 0; a<x; a++) {
+			each name in names 
 				li.option
-				span= options.name
-				.calc
-					span.option_btn#btn_minus -
-					input#quantity(type="text" value="0")
-					span.option_btn#btn_plus +
-			- }
-
-.dropdown
-	.dropdown_head
-		.dropdown_title Сколько гостей
-		i.material-icons.dropdown_arrow expand_more
-	ul.dropdown_options.dropdown--hidden
-		li.option
-			span Взрослые
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="0")
-				span.option_btn#btn_plus +
-		li.option
-			span Дети
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="1")
-				span.option_btn#btn_plus +
-		li.option
-			span Младенцы
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="2")
-				span.option_btn#btn_plus +
-		.controls
-			span.clear Очистить
-			span.select Применить
-
-
-
-.dropdown
-	.dropdown_head
-		.dropdown_title Сколько гостей
-		i.material-icons.dropdown_arrow expand_more
-	ul.dropdown_options.dropdown--hidden
-		li.option
-			span Взрослые
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="0")
-				span.option_btn#btn_plus +
-		li.option
-			span Дети
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="1")
-				span.option_btn#btn_plus +
-		li.option
-			span Младенцы
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="2")
-				span.option_btn#btn_plus +
-		.controls
-			span.clear Очистить
-			span.select Применить
-
-
-.dropdown
-	.dropdown_head
-		.dropdown_title Сколько гостей
-		i.material-icons.dropdown_arrow expand_more
-	ul.dropdown_options.dropdown--hidden
-		li.option
-			span Взрослые
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="0")
-				span.option_btn#btn_plus +
-		li.option
-			span Дети
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="1")
-				span.option_btn#btn_plus +
-		li.option
-			span Младенцы
-			.calc
-				span.option_btn#btn_minus -
-				input#quantity(type="text" value="2")
-				span.option_btn#btn_plus +
-		.controls
-			span.clear Очистить
-			span.select Применить
+					span= name
+					.calc
+						button.option_btn#btn_minus.disabled
+							i -
+						input.quantity(type="text" value="0" disabled)
+						button.option_btn#btn_plus
+							i +
+						
+			.controls
+				span.dropdown__clear.hidden Очистить
+				span.dropdown__select Применить

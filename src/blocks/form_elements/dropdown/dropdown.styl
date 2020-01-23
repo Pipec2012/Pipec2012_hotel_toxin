@@ -8,6 +8,7 @@
    text-align: center
    color: $black--50
    font-size: 1.5rem
+   background: none
 .dropdown_head
    display flex
    align-items: center
@@ -60,6 +61,7 @@
    font-weight: bold
    font-size: 12px
    text-transform: uppercase
+   
 .calc
    display flex
    align-items: center
@@ -70,6 +72,7 @@
       text-align: center
       border: none
       font-size: 1.2rem
+      background: none
 .controls
    margin-top 20px
    display flex
@@ -80,7 +83,15 @@
    text-transform: uppercase
    span 
       cursor pointer
-.select
+.dropdown__select
    color $purple
-.clear
+.dropdown__clear
    color: $black--50
+
+.disabled
+   color: $black--25
+   border: 1px solid $black--25
+   cursor default
+
+.hidden
+   visibility hidden

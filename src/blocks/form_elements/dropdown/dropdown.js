@@ -22,3 +22,52 @@ function showDropdown() {
       }
       
 }
+
+var test_2 = document.querySelector('.quantity');
+var clearButton = document.querySelector('.dropdown__clear');
+
+
+var plus = document.querySelectorAll('#btn_plus');
+
+plus.forEach((element) => {
+   element.onclick = quantityValueUp;
+});
+
+function quantityValueUp() {
+   let test = this.previousSibling;
+   this.previousSibling.previousSibling.classList.remove('disabled');
+   clearButton.classList.remove('hidden');
+   test.value ++;
+  
+}
+
+
+var minus = document.querySelectorAll('#btn_minus');
+
+minus.forEach((element) => {
+   element.onclick = quantityValueDown;
+});
+
+function quantityValueDown() {
+   var test = this.nextSibling;
+   
+   if (this.nextSibling.value > 0) {
+      
+      test.value --;
+      
+   } if(this.nextSibling.value == 0){
+      this.classList.add('disabled');
+      clearButton.classList.add('hidden');
+   } 
+  
+}
+
+
+clearButton.onclick = formReset;
+
+function formReset() {
+   let form = document.querySelector('.dropdown_form');
+   form.reset();
+   clearButton.classList.add('hidden');
+   
+}

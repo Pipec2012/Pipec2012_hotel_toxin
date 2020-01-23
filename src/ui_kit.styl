@@ -6,18 +6,31 @@
 @import 'blocks/form_elements/text_field/text_field.styl';  
 @import 'blocks/form_elements/checkbox/checkbox.styl';
 @import 'blocks/form_elements/dropdown/dropdown.styl';
+@import 'blocks/headers/logged-navbar/logged-navbar';
 
+
+/* обнуление стандартных стилей */
 *   
     margin: 0
     padding: 0
     list-style-type: none
+    text-decoration: none
 :active, :hover, :focus
     outline: 0
     outline-offset: 0
+
+
+
 body
     height 200vh
     font-family: 'Quicksand-Regular','Montserrat-Regular', sans-serif
-.wrapper
+.section_ui_kit
     margin: 6vw
     display: flex
     justify-content space-between
+    
+/* Временная разметка для разбивки бллоков  */
+.ui_kit_line
+    width 100%
+    height 20px
+    background: rgba(31, 32, 65, 0.25)

@@ -1,4 +1,16 @@
-mixin checkbox(options)
-   -
-   .checkbox-wrap
-      h3= options.title
+
+mixin checkbox(title, ...items)
+   .checkbox_wrap
+      .checkbox_head
+         .checkbox_title= title
+            i.material-icons.checkbox_arrow expand_more
+      ul.checkbox_options
+         each item in items
+            li
+               label.check.checkbox_option
+                  input(type="checkbox")
+                  = item
+                  span
+            
+
+            
