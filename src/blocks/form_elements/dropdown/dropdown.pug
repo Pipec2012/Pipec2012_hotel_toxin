@@ -1,21 +1,21 @@
 mixin dropdown(...names)
 	.dropdown
-		.dropdown_head
-			.dropdown_title Сколько гостей
-			i.material-icons.dropdown_arrow expand_more
-		ul.dropdown_options.dropdown--hidden
+		.dropdown__head
+			.dropdown__title Сколько гостей
+			i.material-icons.dropdown__arrow expand_more
+		ul.dropdown__options.dropdown--hidden
 
 
 			each name in names 
-				li.option
+				li.dropdown__option
 					span= name
 					.calc
-						button.option_btn#btn_minus.disabled
+						button.calc__btn#btn_minus.disabled
 							i -
 						input.quantity(type="text" value="0" disabled)
-						button.option_btn#btn_plus
+						button.calc__btn#btn_plus
 							i +
 						
-			.controls
+			.dropdown__controls
 				span.dropdown__clear.hidden Очистить
 				span.dropdown__select Применить

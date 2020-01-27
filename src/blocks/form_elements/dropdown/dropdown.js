@@ -1,5 +1,5 @@
 
-var dropdownArrow = document.querySelectorAll('.dropdown_arrow');
+var dropdownArrow = document.querySelectorAll('.dropdown__arrow');
 
 dropdownArrow.forEach((element) => {
    element.onclick = showDropdown;
