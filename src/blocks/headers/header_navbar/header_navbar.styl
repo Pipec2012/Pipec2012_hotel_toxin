@@ -2,19 +2,23 @@
   margin: 0 auto
   width 100%
 .header
+   max-width 1160px
+   margin: 0 auto
    display flex
    flex-wrap: nowrap
-   justify-content space-around
+   justify-content space-between
    color: $black--50
-   align-items: center  
-
+   align-items: center 
+   height 70px
+   padding: 0 15px 0 15px
 .header__navbar-wrapper
    display flex
    flex-wrap: nowrap
    justify-content space-between
-   width: 527px
    align-items: center
-   flex-basis: 40%
+   max-width 527px
+   flex-basis: 60%
+   margin-left 25%
    li
       display flex 
       align-items: center
@@ -24,6 +28,8 @@
    display flex
    align-items: center
    flex-basis: 35%
+   img:nth-child(2)
+      margin-left 12.5px
 // .navbar_arrow
 //    color: $black--50
 .header__user_logged:before
@@ -46,5 +52,42 @@
    display flex
    align-items: center
    justify-content space-between
+  
+.login__btn
+   display: flex
+   align-items: center
+   margin: auto
+   position: relative
+
+   background: white
+   color: $purple
+   font-weight: bold
+   font-size: 12px
+   box-sizing: border-box
+   padding: 9px 20px
+   uppercase()
+
+   margin-left 40px
+   border-radius: 22px
+   border: 2px solid transparent
+   background-clip: padding-box
+
+.login__btn:before
+   content: ""
+   background $gradient
+   position: absolute
+   border-radius: inherit
+   margin: -2px
+   z-index -2
+   top: 0; right: 0; bottom: 0; left: 0;
+
+      
 .registr__btn
    margin-left 20px
+   background $gradient
+   color: white
+   padding: 9px 20px
+   border-radius: 22px
+   display: flex
+   align-items: center
+   font-weight: bold
