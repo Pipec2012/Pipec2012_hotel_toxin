@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => { 
+
 
 var dropdownArrow = document.querySelectorAll('.dropdown__arrow');
 
@@ -23,13 +25,12 @@ function showDropdown() {
       
 }
 
-var test_2 = document.querySelector('.quantity');
-var clearButton = document.querySelector('.dropdown__clear');
+const dropdownForm = document.querySelectorAll('.quantity'),
+   clearButton = document.querySelector('.dropdown__clear'),
+   btn_plus = document.querySelectorAll('.btn_plus'),
+   btn_minus = document.querySelectorAll('.btn_minus');
 
-
-var plus = document.querySelectorAll('#btn_plus');
-
-plus.forEach((element) => {
+   btn_plus.forEach((element) => {
    element.onclick = quantityValueUp;
 });
 
@@ -41,10 +42,7 @@ function quantityValueUp() {
   
 }
 
-
-var minus = document.querySelectorAll('#btn_minus');
-
-minus.forEach((element) => {
+btn_minus.forEach((element) => {
    element.onclick = quantityValueDown;
 });
 
@@ -55,19 +53,28 @@ function quantityValueDown() {
       
       test.value --;
       
-   } if(this.nextSibling.value == 0){
+   }
+   
+   if(this.nextSibling.value == 0){
+
       this.classList.add('disabled');
+   } 
+   
+   if (document.querySelector('.btn_minus:not(.disabled)') === null ) {
+      
       clearButton.classList.add('hidden');
    } 
   
 }
-
-
-clearButton.onclick = formReset;
-
-function formReset() {
-   let form = document.querySelector('.dropdown_form');
-   form.reset();
-   clearButton.classList.add('hidden');
    
-}
+clearButton.addEventListener('click', () => { 
+        
+      dropdownForm.forEach((item,i) => {
+         btn_minus[i].classList.add('disabled');
+         item.value = 0;
+         clearButton.classList.add('hidden');
+      });
+   
+      });
+
+});

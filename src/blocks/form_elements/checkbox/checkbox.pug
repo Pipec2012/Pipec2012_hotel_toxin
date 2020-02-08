@@ -1,13 +1,13 @@
 
 mixin checkbox(title, ...items)
    .checkbox_wrap
-      .checkbox_head
-         .checkbox_title= title
-            i.material-icons.checkbox_arrow expand_more
-      ul.checkbox_options
+      .checkbox__head
+         .checkbox__title= title
+            i.material-icons.checkbox__arrow expand_more
+      ul.checkbox__options
          each item in items
             li
-               label.check.checkbox_option
+               label.check.checkbox__option
                   input(type="checkbox")
                   = item
                   span

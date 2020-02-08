@@ -5,7 +5,7 @@ import "./blocks/form_elements/dropdown/dropdown"
     
 
 
-    $('.mask-date').mask('99.99.9999');
+    // $('.mask-date').mask('99.99.9999');
 
     
     
