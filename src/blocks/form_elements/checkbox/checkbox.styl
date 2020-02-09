@@ -1,6 +1,43 @@
 
+
 .checkbox__option
    display flex
-   margin-bottom 0.2rem
+   margin 10px 0 0 0
+   align-items: center
+   color: $black--50
+         
+   input
+      -webkit-appearance: none
+      appearance none
+
+.check__box
+   content: ''
+   width: 20px
+   height: 20px
+   display flex
+   justify-content: center
+   align-items: center
+
+   border: 1px solid $black--25
+   border-radius: 4px
+   margin-right 10px
+   cursor pointer
    
-  
+.checkbox__done
+   visibility hidden   
+   background: linear-gradient(#BC9CFF, #8BA4F9)
+   -webkit-background-clip: text
+   color: transparent 
+
+.checkbox__option input:focus + .check__box
+   border: 1px solid $purple
+
+.checkbox__option input:hover + .check__box
+   border: 1px solid $purple
+
+.checkbox__option input:checked + .check__box
+   border: 1px solid $purple
+   
+.checkbox__option input:checked + .check__box .checkbox__done
+   visibility visible
+

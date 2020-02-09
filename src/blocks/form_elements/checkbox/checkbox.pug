@@ -8,9 +8,13 @@ mixin checkbox(title, ...items)
          each item in items
             li
                label.check.checkbox__option
+                  
                   input(type="checkbox")
+                  span.check__box
+                     i.fas.fa-check.checkbox__done
                   = item
-                  span
+                  
+
             
 
             
