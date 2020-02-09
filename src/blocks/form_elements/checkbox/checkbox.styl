@@ -1,11 +1,31 @@
+.checkbox__options
+   opacity: 1
+   max-height: 100%
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   -ms-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
 
+.checkbox__title
+   display: flex
+   align-items: center
+   cursor pointer 
+   font-weight: 800
+   font-size: 12px
+   text-transform: uppercase
+   font-family: $bold
+
+.checkbox__arrow
+   color: $black--50
+   transform: rotate(180deg) 
 
 .checkbox__option
    display flex
    margin 10px 0 0 0
    align-items: center
    color: $black--50
-         
+
    input
       -webkit-appearance: none
       appearance none
@@ -41,3 +61,16 @@
 .checkbox__option input:checked + .check__box .checkbox__done
    visibility visible
 
+.checkbox--hidden 
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   -ms-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+
+   max-height: 0;
+   overflow: hidden;
+   opacity: 0;
+
+.checkbox__arrow--rotate
+   transform: rotate(360deg);
