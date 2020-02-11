@@ -4,11 +4,11 @@ mixin text_field(options)
 		var inputClassName = ""
 		inputClassName += options.isDate ? " mask-date" : ""
 	
-	if options.type == undefined
+	if options.type === undefined
 		.text-field
 			legend= options.title
 			input(class = inputClassName)(type= "text" placeholder= options.placeholder required)   
-			if options.btn_arrow == none
+			if options.btn_arrow !== false
 			else
 				a(href="#")
 					i.material-icons arrow_forward

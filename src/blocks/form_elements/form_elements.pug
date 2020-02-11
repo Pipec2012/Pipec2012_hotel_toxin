@@ -6,5 +6,13 @@ include ./checkbox/checkbox
 +text_field({title: "Text field", type:"text", placeholder: "Email", btn_arrow: true})
 //- +checkbox({title: "Text field"})
 +dropdown("Взрослые", "Дети", "Младенцы")
-+checkbox('expandable checkbox list', "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
-+checkbox('expandable checkbox list', "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
++checkbox({title: "expandable checkbox list"}, "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
+
++checkbox({title: "rich Checkbox Buttons", boldTitle: true, 
+elems: [
+   {title: "Широкий коридор", 
+   subTitle: "Ширина коридоров в номере не менее 91 см."},
+
+   {title: "Помощник для инвалидов", 
+   subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."},
+]})

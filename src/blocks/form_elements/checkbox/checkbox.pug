@@ -1,19 +1,53 @@
 
-mixin checkbox(title, ...items)
-   .checkbox_wrap
-      .checkbox__head
-         .checkbox__title= title
-            i.material-icons.checkbox__arrow expand_more
-      ul.checkbox__options
-         each item in items
-            li
-               label.check.checkbox__option
-                  
-                  input(type="checkbox")
-                  span.check__box
-                     i.fas.fa-check.checkbox__done
-                  = item
-                  
+mixin checkbox(options, ...items)
+
+   //- dropdown = false - обычный чекбоксы без выпадающего списка, 
+   //- title = bold - чекбоксы rich с жирным заголовком
+   //-    обычный - выпадающий список 
+
+   -
+   if (options.dropdown === false)
+   
+      .checkbox_wrap
+         .checkbox__title= options.title
+         ul.checkbox__options
+            each item in items
+               li
+                  label.check.checkbox__option
+                     
+                     input(type="checkbox")
+                     span.check__box
+                        i.fas.fa-check.checkbox__done
+                     = item
+   if (options.boldTitle === true)
+      .checkbox_wrap
+         .checkbox__title= options.title
+         ul.checkbox__options
+            each elem in options.elems
+               li
+                  label.check.checkbox__option
+                     
+                     input(type="checkbox")
+                     span.check__box
+                        i.fas.fa-check.checkbox__done
+                     div
+                        .--bold= elem.title
+                  span.sub__text= elem.subTitle
+   else 
+      .checkbox_wrap
+         .checkbox__head
+            .checkbox__title= options.title
+               i.material-icons.checkbox__arrow expand_more
+         ul.checkbox__options
+            each item in items
+               li
+                  label.check.checkbox__option
+                     
+                     input(type="checkbox")
+                     span.check__box
+                        i.fas.fa-check.checkbox__done
+                     = item
+                     
 
             
 
