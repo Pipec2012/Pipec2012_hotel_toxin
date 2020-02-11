@@ -3,7 +3,7 @@ mixin checkbox(options, ...items)
 
    //- dropdown = false - обычный чекбоксы без выпадающего списка, 
    //- title = bold - чекбоксы rich с жирным заголовком
-   //-    обычный - выпадающий список 
+   //- по умолчанию - выпадающий список 
 
    -
    if (options.dropdown === false)
@@ -13,7 +13,7 @@ mixin checkbox(options, ...items)
          ul.checkbox__options
             each item in items
                li
-                  label.check.checkbox__option
+                  label.checkbox__option
                      
                      input(type="checkbox")
                      span.check__box
@@ -25,13 +25,13 @@ mixin checkbox(options, ...items)
          ul.checkbox__options
             each elem in options.elems
                li
-                  label.check.checkbox__option
+                  label.checkbox__option
                      
                      input(type="checkbox")
                      span.check__box
                         i.fas.fa-check.checkbox__done
                      div
-                        .--bold= elem.title
+                        .label__title_bold= elem.title
                   span.sub__text= elem.subTitle
    else 
       .checkbox_wrap
@@ -41,7 +41,7 @@ mixin checkbox(options, ...items)
          ul.checkbox__options
             each item in items
                li
-                  label.check.checkbox__option
+                  label.checkbox__option
                      
                      input(type="checkbox")
                      span.check__box

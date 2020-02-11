@@ -1,0 +1,45 @@
+.radio_btn__options
+   margin-top 10px
+
+.radio_btn__options li
+   display inline-flex
+   margin 0 15px 0 0
+
+
+.radio_btn__option
+   color $black--50
+   input
+      -webkit-appearance: none
+      appearance none
+
+.radio__circle
+   margin-right 10px
+   cursor pointer
+   width: 20px
+   height: 20px
+
+   
+   border: 1px solid $black--25
+   border-radius: 50%
+   display: inline-flex
+   align-items: center
+   justify-content: center
+.circle__done
+   width: 12px
+   height: 12px
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+   border-radius: 50%
+   display: inline-block
+   visibility hidden
+
+.radio_btn__option input:focus + .radio__circle
+   border: 1px solid $purple
+
+.radio_btn__option input:hover + .radio__circle
+   border: 1px solid $purple
+
+.radio_btn__option input:checked + .radio__circle
+   border: 1px solid $purple
+   
+.radio_btn__option input:checked + .radio__circle .circle__done
+   visibility visible

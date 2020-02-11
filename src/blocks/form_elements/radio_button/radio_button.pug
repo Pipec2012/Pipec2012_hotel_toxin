@@ -1,0 +1,16 @@
+mixin radio_button(options)
+ - let checked = true
+   .radio_btn_wrap
+      .radio_btn__title= options.title
+      ul.radio_btn__options
+     
+         each elem in options.elements
+            li
+               label.radio_btn__option
+                  input(type="radio" name="gender" checked=checked)
+                  span.radio__circle
+                     span.circle__done
+                  =elem
+               - checked = false
+            
+         
