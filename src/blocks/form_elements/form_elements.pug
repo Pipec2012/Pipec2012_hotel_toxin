@@ -16,7 +16,12 @@ include ./room_details/room_details
 //-    subTitle: "Ширина коридоров в номере не менее 91 см."},
 
 //-    {title: "Помощник для инвалидов", 
-//-    subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."},
+//-    subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."}
 //- ]})
 
-+radio_button({title: "Radio Buttons", elements: ["Мужчина", "Женщина"]})
+//- +radio_button({title: "Radio Buttons", elements: ["Мужчина", "Женщина"]})
+
++room_details({elems: [
+   {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
+   {title: "Удобство", subTitle: "Окно в каждой из спален"}
+   ]})

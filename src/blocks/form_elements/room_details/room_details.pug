@@ -1,12 +1,13 @@
 
 mixin room_details(options)
-
+   - let i = 1
    .room_details__wrap
-      .room_details__header= options.header
       ul.room_details__options
          each elem in options.elems
             li.room_details__option
                .room_details__img
-                  img(src="", alt="")
-               .room_details__title
-                  span.details__sub_title
+                  img(src="./blocks/form_elements/room_details/img/room_details_" + i + ".svg", alt="")
+               .details__title_wrap   
+                  .room_details__title=elem.title
+                  .details__sub_title=elem.subTitle
+               -  i = i + 1
