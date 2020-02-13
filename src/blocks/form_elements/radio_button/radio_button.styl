@@ -7,23 +7,24 @@
 
 
 .radio_btn__option
-   color $black--50
+   
    input
       -webkit-appearance: none
       appearance none
-
+.option__title
+   color: $black--50
 .radio__circle
    margin-right 10px
    cursor pointer
    width: 20px
    height: 20px
-
    
    border: 1px solid $black--25
    border-radius: 50%
    display: inline-flex
    align-items: center
    justify-content: center
+
 .circle__done
    width: 12px
    height: 12px
@@ -40,6 +41,9 @@
 
 .radio_btn__option input:checked + .radio__circle
    border: 1px solid $purple
-   
+
+.radio_btn__option input:checked ~ .option__title
+   color: $black
+
 .radio_btn__option input:checked + .radio__circle .circle__done
    visibility visible
