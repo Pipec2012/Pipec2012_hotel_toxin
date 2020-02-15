@@ -4,6 +4,7 @@ include ./checkbox/checkbox
 include ./radio_button/radio_button
 include ./room_details/room_details
 include ./toggle/toggle
+include ./like_button/like_button
 
 //- +text_field({title: "Text field", type:"email", placeholder: "Email"})
 //- +text_field({title: "Text field", type:"text", placeholder: "Email", btn_arrow: true})
@@ -28,8 +29,10 @@ include ./toggle/toggle
 //-    ]})
 
 
-+toggle({
-   title: "Togle", elems: [
-      {toggleName: "Получать спецпредложения"}
-      ]
-})
+//- +toggle({
+//-    title: "Toggle", elems: [
+//-       {toggleName: "Получать спецпредложения"}
+//-       ]
+//- })
+
++like_button({title: "like button"})
