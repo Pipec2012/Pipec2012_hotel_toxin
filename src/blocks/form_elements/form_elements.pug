@@ -3,6 +3,7 @@ include ./dropdown/dropdown
 include ./checkbox/checkbox
 include ./radio_button/radio_button
 include ./room_details/room_details
+include ./toggle/toggle
 
 //- +text_field({title: "Text field", type:"email", placeholder: "Email"})
 //- +text_field({title: "Text field", type:"text", placeholder: "Email", btn_arrow: true})
@@ -21,7 +22,14 @@ include ./room_details/room_details
 
 //- +radio_button({title: "Radio Buttons", elements: ["Мужчина", "Женщина"]})
 
-+room_details({elems: [
-   {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
-   {title: "Удобство", subTitle: "Окно в каждой из спален"}
-   ]})
+//- +room_details({elems: [
+//-    {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
+//-    {title: "Удобство", subTitle: "Окно в каждой из спален"}
+//-    ]})
+
+
++toggle({
+   title: "Togle", elems: [
+      {toggleName: "Получать спецпредложения"}
+      ]
+})

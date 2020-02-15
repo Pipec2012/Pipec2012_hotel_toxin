@@ -1,0 +1,45 @@
+
+.toggle__option
+   display: flex
+   align-items: center
+   input
+      -webkit-appearance: none
+      appearance none
+
+.togle__round
+   width: 40px
+   height: 20px
+   margin 15px 15px 15px 0
+   border: 1px solid $black--25
+   box-sizing: border-box
+   border-radius: 10px
+
+   display: flex
+   align-items: center
+   // justify-content: flex-start
+   padding: 0 4px
+
+
+.toggle__circle
+   width: 12px
+   height: 12px
+   background: $black--25
+   border-radius: 50%
+   transition(0.5s)
+
+// .toggle__option input:focus + .togle__round
+//    border: 1px solid $purple
+
+// .toggle__option input:hover + .togle__round
+//    border: 1px solid $purple
+
+.toggle__option input:checked + .togle__round
+   border: 1px solid $purple
+   
+   
+.toggle__option input:checked + .togle__round .toggle__circle
+   transition(0.4s)
+   transform: translateX(18px)
+   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+   
+

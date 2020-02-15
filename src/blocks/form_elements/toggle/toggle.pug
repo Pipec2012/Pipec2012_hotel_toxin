@@ -1,0 +1,13 @@
+mixin toggle(options)
+
+   .toggle_wrap
+      .toggle__head
+         .toggle__title= options.title
+      ul.toggle__options
+      each elem in options.elems
+         li
+            label.toggle__option
+               input(type="checkbox")  
+               .togle__round
+                  .toggle__circle
+               = elem.toggleName
