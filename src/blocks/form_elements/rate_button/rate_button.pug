@@ -1,0 +1,20 @@
+mixin rate_button(title, options)
+
+   .rate_button_wrap
+      if (title === undefined)
+         .rate_button_body
+            i.material-icons.rate_star.active
+            i.material-icons.rate_star
+            i.material-icons.rate_star
+            i.material-icons.rate_star
+            i.material-icons.rate_star
+
+      else
+         .rate_button_head
+            .rate_button__title= title
+         .rate_button_body
+            i.material-icons.rate_star.active
+            i.material-icons.rate_star
+            i.material-icons.rate_star
+            i.material-icons.rate_star
+            i.material-icons.rate_star

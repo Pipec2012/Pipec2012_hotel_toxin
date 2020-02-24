@@ -1,0 +1,22 @@
+.rate_button__title
+   bold()
+   uppercase()
+
+.rate_button_body
+   margin-top 15px
+   cursor pointer
+   .material-icons 
+      background: linear-gradient(#BC9CFF, #8BA4F9)
+      -webkit-background-clip: text
+      color: transparent
+
+.rate_star.active ~ .rate_star:after
+   content: "star_border"
+.rate_star:after
+   content: "star"
+
+.rate_button_body:hover .rate_star:after
+   content: "star"
+
+.rate_star:hover ~ .rate_star:after
+   content: "star_border"
