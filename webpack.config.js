@@ -7,14 +7,15 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const PATH = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'dist')
+    build: path.join(__dirname, 'dist'),
 }
 
 module.exports = {
+
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
     },
 module: {
     rules: [{
@@ -23,7 +24,7 @@ module: {
             loader: MiniCssExtractPlugin.loader
         },
             'css-loader',
-            'stylus-loader'
+            'stylus-loader',
         ],
     },
     {
@@ -31,6 +32,7 @@ module: {
         loader: ['html-loader','pug-html-loader'],
         
     },
+    
     // {
     //     test: /\.pug$/,
     //     loader:'pug-loader',
@@ -46,7 +48,7 @@ module: {
                 loader: 'file-loader',
                 options:
                 {
-                    name: './fonts/[name].[ext]'
+                    name: './fonts/[name].[ext]',
                 }
             }
         ]
@@ -104,7 +106,7 @@ module: {
         new HtmlWebpackPlugin({
             // inject: false,
             // hash: true,
-            template: PATH.source + '/index.pug'
+            template: PATH.source + '/index.pug',
         }),
         new MiniCssExtractPlugin({
             filename: "style.css",
@@ -117,13 +119,13 @@ module: {
         //     // {from: PATH.src + '/static'},
         // ]),
         new CleanWebpackPlugin({
-            verbose: true
+            verbose: true,
         }),
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        //     'window.jQuery': 'jquery'
-        // }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
