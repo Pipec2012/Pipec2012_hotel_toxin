@@ -3,5 +3,10 @@ mixin range_slider(options)
    .range_slider_wrap
       .range_slider__head
          .range_slider__title= options.title
+         .range_slider__price
+            span.min__price
+            span  - 
+            span.max__price
       .range_slider__body
-         <input type="text" class="js-range-slider" name="my_range" value="" />
+         input(type="text" class="js-range-slider" name="my_range" value="")
+         
