@@ -1,0 +1,15 @@
+mixin button(options)
+
+   .button_wrap
+      if (options.title === undefined)
+         .button_body
+            a(href="#") 
+               .gradient__button 
+                  div.btn_test(class=options.gradientBorder ? "border-gradient" : "")=options.name
+      else
+         .button_head
+            .button__title= options.title
+         .button_body
+            a(href="#") 
+               .gradient__button 
+                  div.btn_test(class=options.gradientBorder ? "border-gradient" : "")=options.name

@@ -1,9 +1,11 @@
+include ../form_elements/buttons/buttons
+
 .header_wrap
     .header
         .header__logo
             a(href="#").logo__link
-                img(src="./blocks/headers/header_navbar/img/logo_toxin.svg", alt="#")
-                img(src="./blocks/headers/header_navbar/img/logo_text_toxin.svg", alt="#")
+                img(src="./blocks/header/img/logo_toxin.svg", alt="#")
+                img(src="./blocks/header/img/logo_text_toxin.svg", alt="#")
         nav.header__navbar-wrapper
             ul
                 li
@@ -24,9 +26,6 @@
         .header__user_logged Cosmin Negoita
 
         .header__login_block
-            a(href="#") 
-                .login__btn.btn 
-                    .border-gradient Login
-        
-            a(href="#") 
-                .registr__btn.btn REGISTER
+            +button({gradientBorder: true, name: "Login"})
+
+            +button({name: "Register"})
