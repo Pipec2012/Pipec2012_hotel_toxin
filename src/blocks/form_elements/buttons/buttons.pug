@@ -1,15 +1,31 @@
 mixin button(options)
 
    .button_wrap
-      if (options.title === undefined)
+      if (options.textBtn === true)
+         .button_body
+            a(href="#") 
+               .button__text=options.name
+
+      else if (options.arrowBtn === true)
          .button_body
             a(href="#") 
                .gradient__button 
-                  div.btn_test(class=options.gradientBorder ? "border-gradient" : "")=options.name
+                  .button__arrow(class=options.gradientBorder ? "border-gradient" : "")=options.name
+                  span
+                     i.material-icons arrow_forward
+
+      else if (options.title === undefined)
+         .button_body
+            a(href="#") 
+               .gradient__button 
+                  .btn(class=options.gradientBorder ? "border-gradient" : "")=options.name
+      
       else
          .button_head
             .button__title= options.title
          .button_body
             a(href="#") 
                .gradient__button 
-                  div.btn_test(class=options.gradientBorder ? "border-gradient" : "")=options.name
+                  .btn(class=options.gradientBorder ? "border-gradient" : "")=options.name
+
+      
