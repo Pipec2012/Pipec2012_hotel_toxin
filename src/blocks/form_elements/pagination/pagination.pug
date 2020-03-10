@@ -1,0 +1,17 @@
+mixin pagination(options)
+
+   .pagination_wrap
+      if (options.title === undefined)
+         #data-container
+            #pagination-container
+            .rental__options
+               span 1 – 12 из 100+ вариантов аренды
+
+
+      else
+         .pagination_head
+            .rate_button__title= options.title
+         #data-container
+            #pagination-container
+            .rental__options
+               span 1 – 12 из 100+ вариантов аренды

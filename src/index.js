@@ -6,4 +6,5 @@ import "./blocks/form_elements/checkbox/checkbox";
 import "./blocks/form_elements/like_button/like_button";
 import "./blocks/form_elements/rate_button/rate_button";
 import "./blocks/form_elements/range_slider/range_slider";
+import "./blocks/form_elements/pagination/pagination";
     // $('.mask-date').mask('99.99.9999');
