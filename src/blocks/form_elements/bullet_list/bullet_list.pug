@@ -1,0 +1,10 @@
+mixin bullet_list(options)
+
+   .bullet_list
+      .bullet_list__title= options.title
+      ul.bullet_list__options
+         each item in options.items
+            li.bullet_list__option
+               span.bullet_list__circle
+               span.bullet_list__text= item.name
+               
