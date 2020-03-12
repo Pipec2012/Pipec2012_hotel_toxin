@@ -1,0 +1,19 @@
+include ../like_button/like_button
+
+
+mixin reviews(options)
+
+   .reviews__wrap
+      .reviews__title= options.title
+      ul.reviews__options
+         each item in options.items
+            li.reviews__option
+               .user__block
+                  .user__photo
+                     img()
+                  .user__info
+                     .user_name
+                     .reviews_data
+               .reviews__block
+                  +like_button({})
+               
