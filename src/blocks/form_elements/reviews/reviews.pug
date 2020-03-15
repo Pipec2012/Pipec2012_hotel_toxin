@@ -2,7 +2,7 @@ include ../like_button/like_button
 
 
 mixin reviews(options)
-
+   - let i = 1
    .reviews__wrap
       .reviews__title= options.title
       ul.reviews__options
@@ -10,10 +10,12 @@ mixin reviews(options)
             li.reviews__option
                .user__block
                   .user__photo
-                     img()
-                  .user__info
-                     .user_name
-                     .reviews_data
+                     img(src="./blocks/form_elements/reviews/img/reviews_user__photo" + i + ".png", alt="user photo")
+                  +like_button({check: true})
+                  
                .reviews__block
-                  +like_button({})
-               
+                  .user__info
+                     .user_name= item.userName ? item.userName : "Мурад Сарафанов"
+                     .review_data= item.reviewData ? item.reviewData : "5 дней назад"
+                  .review_text= item.reviewText ? item.reviewText : "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+               -  i ++

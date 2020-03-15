@@ -33,7 +33,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server",
     "prod": "webpack -p",
     "develop": "webpack -d",
     "test": "echo \"Error: no test specified\" && exit 1"
