@@ -7,7 +7,8 @@ placeholder-input(color)
 
 .text-field
    legend 
-      font-family: $bold
+      bold()
+      uppercase()
    input 
       width: 320px
       // height: 44px
@@ -15,19 +16,22 @@ placeholder-input(color)
       box-sizing: border-box;
       border-radius: 4px
       padding: 13px 35px 13px 15px
-      margin-top: 15px
       position: relative
 
    placeholder-input($black--25)
 
-   input:hover, :focus
+
+.text-field__title
+   margin-bottom: 15px
+
+input:hover, input:focus
       border: 1px solid $black--50
 
 
-   input:hover::-webkit-input-placeholder { color:$black--75 }
-   input:hover::-moz-placeholder { color:$black--75 }
-   input:focus::-webkit-input-placeholder { color:$black--75 }
-   input:focus::-moz-placeholder { color:$black--75 }
+input:hover::-webkit-input-placeholder { color:$black--75 }
+input:hover::-moz-placeholder { color:$black--75 }
+input:focus::-webkit-input-placeholder { color:$black--75 }
+input:focus::-moz-placeholder { color:$black--75 }
 
 .text-field_arrow
    background: linear-gradient(#BC9CFF, #8BA4F9)
@@ -35,5 +39,5 @@ placeholder-input(color)
    color: transparent 
    // vertical-align: middle
    margin-left -30px
-   margin-top 25px
+   margin-top 10px
    position: absolute
