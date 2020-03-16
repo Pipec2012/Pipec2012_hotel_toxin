@@ -1,7 +1,7 @@
-mixin dropdown(...names)
+mixin dropdown(title,...names)
 	.dropdown
 		.dropdown__head
-			.dropdown__title Сколько гостей
+			.dropdown__title= title
 			i.material-icons.dropdown__arrow expand_more
 		ul.dropdown__options.dropdown--hidden
 

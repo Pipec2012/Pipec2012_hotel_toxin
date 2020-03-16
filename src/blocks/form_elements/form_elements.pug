@@ -13,11 +13,17 @@ include ./bullet_list/bullet_list
 include ./reviews/reviews
 
 
-+text_field({title: "Text field", type:"email", placeholder: "Email"})
-+text_field({title: "Text field", type:"text", placeholder: "ДД.ММ.ГГГГ", isDate: true})
-+text_field({ type:"text", placeholder: "Email", btn_arrow: true})
+//- +text_field({title: "Text field", type:"email", placeholder: "Email"})
+//- +text_field({title: "Text field", type:"text", placeholder: "ДД.ММ.ГГГГ", isDate: true})
++text_field({title: "Text field", 
+   elems: [
+      {type: "text", placeholder: "Text", btn_arrow: true},
+      {type: "text", placeholder: "Text"}
+   ]
+   })
+
 //- +checkbox({title: "Text field"})
-//- +dropdown("Взрослые", "Дети", "Младенцы")
+//- +dropdown("Dropdown", "Взрослые", "Дети", "Младенцы")
 //- +checkbox({title: "expandable checkbox list"}, "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
 
 //- +checkbox({title: "rich Checkbox Buttons", boldTitle: true, 

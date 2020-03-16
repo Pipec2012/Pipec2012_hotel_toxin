@@ -2,13 +2,16 @@ mixin text_field(options)
 	
 	.text_field__wrap
 		legend(class= options.title ? "text-field__title" : "")=options.title ? options.title : ""
-		input(class = options.isDate ? " mask-date" : "")(type= options.type ? options.type : "text"
-			placeholder= options.placeholder ? options.placeholder : "Email" required)
 
-		if options.btn_arrow === true
-			a(href="#")
-				i.material-icons.text-field_arrow arrow_forward
-		else
+		each elem in options.elems
+			.field
+				input(class = elem.isDate ? " mask-date" : "")(type= elem.type ? elem.type : "text"
+					placeholder= elem.placeholder ? elem.placeholder : "Email" required)
+
+				if elem.btn_arrow === true
+					a(href="#")
+						i.material-icons.text-field_arrow arrow_forward
+				else
 			
 	
 		
