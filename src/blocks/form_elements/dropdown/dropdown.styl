@@ -1,14 +1,23 @@
+.dropdown__title
+   bold()
+   uppercase()
+   margin-bottom 15px
 
+.option__name
+   bold()
+   uppercase()
 .calc__btn
    border: 1px solid $black--50
    border-radius: 50%  
    cursor pointer
    height 30px
    width 30px
-   text-align: center
+   display flex
+   align-items: center
+   justify-content: center
    color: $black--50
-   font-size: 1.5rem
-   background: none
+   .material-icons
+      font-size: 1.2857rem
 
 .dropdown__head
    display flex
@@ -39,33 +48,19 @@
    border-top: none
    opacity: 1
    max-height: 100%
-   -webkit-transition: all 0.3s;
-   -moz-transition: all 0.3s;
-   -ms-transition: all 0.3s;
-   -o-transition: all 0.3s;
-   transition: all 0.3s;
+   transition(0.3s)
 
 .dropdown--hidden 
-   -webkit-transition: all 0.3s;
-   -moz-transition: all 0.3s;
-   -ms-transition: all 0.3s;
-   -o-transition: all 0.3s;
-   transition: all 0.3s;
+   transition(0.3s)
 
    max-height: 0;
    overflow: hidden;
    opacity: 0;
-
-// .dropdown_title 
-   
    
 .dropdown__option 
    display flex
    align-items: center
    justify-content space-between
-   font-weight: bold
-   font-size: 12px
-   text-transform: uppercase
    
 .calc
    display flex
@@ -88,8 +83,13 @@
    text-transform: uppercase
    span 
       cursor pointer
+
+.quantity
+   bold()
+
 .dropdown__select
    color $purple
+
 .dropdown__clear
    color: $black--50
 

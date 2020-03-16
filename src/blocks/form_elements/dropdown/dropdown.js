@@ -25,20 +25,21 @@ function showDropdown() {
       
 }
 
-const dropdownForm = document.querySelectorAll('.quantity'),
-   clearButton = document.querySelector('.dropdown__clear'),
-   btn_plus = document.querySelectorAll('.btn_plus'),
+const btn_plus = document.querySelectorAll('.btn_plus'),
    btn_minus = document.querySelectorAll('.btn_minus');
 
    btn_plus.forEach((element) => {
    element.onclick = quantityValueUp;
 });
 
-function quantityValueUp() {
-   let test = this.previousSibling;
+function quantityValueUp(event) {
+   let quantityVulue = this.previousSibling,
+      btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
+   
    this.previousSibling.previousSibling.classList.remove('disabled');
-   clearButton.classList.remove('hidden');
-   test.value ++;
+   
+   btnClear.classList.remove('hidden');
+   quantityVulue.value ++;
   
 }
 
@@ -47,11 +48,11 @@ btn_minus.forEach((element) => {
 });
 
 function quantityValueDown() {
-   var test = this.nextSibling;
+   let quantityVulue = this.nextSibling;
    
    if (this.nextSibling.value > 0) {
       
-      test.value --;
+      quantityVulue.value --;
       
    }
    
@@ -60,21 +61,32 @@ function quantityValueDown() {
       this.classList.add('disabled');
    } 
    
-   if (document.querySelector('.btn_minus:not(.disabled)') === null ) {
-      
-      clearButton.classList.add('hidden');
+   if (this.closest('.dropdown__options').querySelector('.btn_minus:not(.disabled)') === null ) {
+      let btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
+      btnClear.classList.add('hidden');
    } 
   
 }
    
-clearButton.addEventListener('click', () => { 
-        
-      dropdownForm.forEach((item,i) => {
-         btn_minus[i].classList.add('disabled');
-         item.value = 0;
-         clearButton.classList.add('hidden');
-      });
+
+   event.target.addEventListener('click', (e) => { 
+      
+      if (e.target.classList.contains("dropdown__clear")) {
+         let inputQuantity = e.target.closest(".dropdown__options").querySelectorAll(".quantity"),
+            clearButton = e.target,
+            btnMinus = e.target.closest(".dropdown__options").querySelectorAll(".btn_minus");
+
+         inputQuantity.forEach((item,i) => {
+            btnMinus[i].classList.add('disabled');
+            item.value = 0;
+            clearButton.classList.add('hidden');
+         });
+      }
    
       });
+
+
+   
+
 
 });

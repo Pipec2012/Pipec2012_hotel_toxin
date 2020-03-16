@@ -1,20 +1,21 @@
-mixin dropdown(title,...names)
-	.dropdown
+mixin dropdown(options)
+	.dropdown__wrap
+		.dropdown__title= options.title
 		.dropdown__head
-			.dropdown__title= title
+			.head__title= options.headTitle
 			i.material-icons.dropdown__arrow expand_more
 		ul.dropdown__options.dropdown--hidden
 
 
-			each name in names 
+			each elem in options.elems 
 				li.dropdown__option
-					span= name
+					span.option__name= elem.name
 					.calc
 						button.calc__btn.btn_minus.disabled
-							i -
+							i.material-icons remove
 						input.quantity(type="text" value="0" disabled)
 						button.calc__btn.btn_plus
-							i +
+							i.material-icons add
 						
 			.dropdown__controls
 				span.dropdown__clear.hidden Очистить
