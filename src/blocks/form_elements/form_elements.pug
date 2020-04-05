@@ -11,6 +11,7 @@ include ./buttons/buttons
 include ./pagination/pagination
 include ./bullet_list/bullet_list
 include ./reviews/reviews
+include ./data_dropdown/data_dropdown
 
 
 //- +text_field({title: "Text field", type:"email", placeholder: "Email"})
@@ -23,22 +24,22 @@ include ./reviews/reviews
    })
 
 //- +checkbox({title: "Text field"})
-+dropdown({title: "dropdown", headTitle: "Сколько гостей",
-   elems: [
-      {name: "взрослые"},
-      {name: "дети"},
-      {name: "младенцы"}
-   ]
-   })
+//- +dropdown({title: "dropdown", headTitle: "Сколько гостей",
+//-    elems: [
+//-       {name: "взрослые"},
+//-       {name: "дети"},
+//-       {name: "младенцы"}
+//-    ]
+//-    })
 
-+dropdown({title: "dropdown", headTitle: "Сколько гостей",
-   elems: [
-      {name: "взрослые"},
-      {name: "дети"},
-      {name: "младенцы"}
-   ]
-   })
-
+//- +dropdown({title: "dropdown", headTitle: "Сколько гостей",
+//-    elems: [
+//-       {name: "взрослые"},
+//-       {name: "дети"},
+//-       {name: "младенцы"}
+//-    ]
+//-    })
++data_dropdown({title: "filter dropdown"})
 //- +checkbox({title: "expandable checkbox list"}, "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
 
 //- +checkbox({title: "rich Checkbox Buttons", boldTitle: true, 

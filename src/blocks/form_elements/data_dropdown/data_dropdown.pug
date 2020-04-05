@@ -1,0 +1,17 @@
+mixin data_dropdown(options)
+	
+   -
+   
+   if (options.filter === true)
+      .data_dropdown__wrap
+         .data_dropdown__head
+            div(class= options.title ? "data_dropdown__title" : "")= options.title ? options.title : ""
+         .data_dropdown__body
+            input(type="text")
+   else
+      .data_dropdown__wrap
+         .data_dropdown__head
+            div(class= options.title ? "data_dropdown__title" : "")= options.title ? options.title : ""
+         .data_dropdown__body
+            input(type="text" name="startDate")
+            input(type="text" name="endDate")
