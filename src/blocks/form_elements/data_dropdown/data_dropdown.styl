@@ -4,3 +4,90 @@
 .data_dropdown__title
    margin-bottom 15px
 
+
+.datepicker 
+   font-size: 0.8571rem
+   width: 320px;
+   height: 369px;
+   font-family: 'Quicksand-Regular','Montserrat-Regular', sans-serif
+   
+.datepicker--nav-title
+   bold()
+   font-size: 1.3571rem
+
+.datepicker--nav
+   border-bottom: none
+
+.datepicker--content
+   margin-top 15px
+
+.datepicker--cells
+   margin-top 15px
+   justify-content: center
+   height: 230px;
+.datepicker--cell
+   width: 40.14px;
+   height: 40.44px;
+.datepicker--cell-day.-current-
+   width: 39.88px;
+   height: 40px;
+   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+   border-radius: 50%
+   color: white
+   font-weight: bold;
+
+.datepicker--cell-day.-current-.-focus-
+   color: white
+
+.datepicker--cell-day.-focus-
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   opacity: 0.5;
+   color: white
+   border-radius: 50%
+
+.-range-from-.-selected-,.-range-to-.-selected-
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   border-radius: 50%
+
+.-range-from-.-selected-:hover,.-range-to-.-selected-:hover
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   border-radius: 50%
+   opacity: 0.5;
+
+.-range-from-.-selected-:after
+   content: ""
+   display: block
+   background: linear-gradient(180deg,#bc9cff40,#8ba4f940);
+   width 100%
+   height 100%
+   position absolute
+   z-index -2
+   border-radius: 100px 50%  50% 100px;
+
+.-range-to-.-selected-:before
+   content: ""
+   display: block
+   background: linear-gradient(180deg,#bc9cff40,#8ba4f940);
+   width 100%
+   height 100%
+   position absolute
+   z-index -2
+   border-radius: 50% 100px 100px 50%;
+
+
+
+.datepicker--cell.-in-range-
+   background: linear-gradient(180deg,#bc9cff40,#8ba4f940);
+   color: $black
+   
+.datepicker--day-name,.datepicker--button-apply
+   bold()
+.datapicker_arrow,.datepicker--day-name,.datepicker--button-apply
+   color: $purple
+
+.datepicker--button-apply
+   uppercase()
+
+.datepicker--button:hover
+   background: none
+   color: $black--50

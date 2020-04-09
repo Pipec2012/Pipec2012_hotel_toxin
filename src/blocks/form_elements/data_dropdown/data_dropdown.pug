@@ -7,11 +7,14 @@ mixin data_dropdown(options)
          .data_dropdown__head
             div(class= options.title ? "data_dropdown__title" : "")= options.title ? options.title : ""
          .data_dropdown__body
-            input(type="text")
+            input(type="text" autocomplete="off")
    else
       .data_dropdown__wrap
          .data_dropdown__head
             div(class= options.title ? "data_dropdown__title" : "")= options.title ? options.title : ""
          .data_dropdown__body
-            input(type="text" name="startDate")
-            input(type="text" name="endDate")
+ 
+            input(type="text" id="start_one" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" autocomplete="off")
+            
+            input(type='text' id='end_one' autocomplete="off")
+         
