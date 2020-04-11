@@ -6,13 +6,13 @@ mixin data_dropdown(options)
       .filter_dropdown__wrap
          .data_dropdown__body
             label(class= options.title ? "filter_dropdown__title" : "")= options.title ? options.title : ""
-               input.filter_dropdown__input(type="text" id="filter_dropdown" autocomplete="nope" data-range="true" data-multiple-dates-separator=" - ")
+               input.filter_dropdown__input(type="text" id="filter_dropdown" data-range="true" data-multiple-dates-separator=" - ")
                i.material-icons.data_dropdown__arrow expand_more
    else
       .data_dropdown__wrap
          .data_dropdown__body
             label.data_dropdown__title= options.nameOne
-               input.data_dropdown__input(type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="nope" id="range_start" data-range="true" data-multiple-dates-separator="-")
+               input.data_dropdown__input(type="text" placeholder="ДД.ММ.ГГГГ" id="range_start" data-range="true" data-multiple-dates-separator="-")
                i.material-icons.data_dropdown__arrow expand_more
             label.data_dropdown__title= options.nameTwo
                input.data_dropdown__input(type='text' placeholder="ДД.ММ.ГГГГ" id='range_end')

@@ -18,8 +18,14 @@ include ./data_dropdown/data_dropdown
 //- +text_field({title: "Text field", type:"text", placeholder: "ДД.ММ.ГГГГ", isDate: true})
 +text_field({title: "Text field",  
    elems: [
-      {type: "text", placeholder: "Text", btn_arrow: true},
+      {type: "text", placeholder: "Text"},
       {type: "text", placeholder: "Text"}
+   ]
+   })
+
++text_field({title: "subscription text field", subs: true, 
+   elems: [
+      {},
    ]
    })
 

@@ -1,17 +1,20 @@
 mixin text_field(options)
 	
 	.text_field__wrap
-		legend(class= options.title ? "text-field__title" : "")=options.title ? options.title : ""
-
-		each elem in options.elems
-			.field
-				input(class = elem.isDate ? " mask-date" : "")(type= elem.type ? elem.type : "text"
-					placeholder= elem.placeholder ? elem.placeholder : "Email" required)
-
-				if elem.btn_arrow === true
-					a(href="#")
-						i.material-icons.text-field_arrow arrow_forward
-				else
-			
-	
+		-
 		
+		if	(options.subs === true)
+			.field
+				label(class= options.title ? "text-field__title" : "")=options.title ? options.title : ""
+				input.field__subs(type= options.type ? options.type : "email"
+					placeholder= options.placeholder ? options.placeholder : "Email" required)
+				a(href="#").subs__btn
+					i.material-icons.text-field_arrow arrow_forward
+
+		else
+			legend(class= options.title ? "text-field__title" : "")=options.title ? options.title : ""
+
+			each elem in options.elems
+				.field
+					input(class = elem.isDate ? " mask-date" : "")(type= elem.type ? elem.type : "text"
+						placeholder= elem.placeholder ? elem.placeholder : "Email" required)

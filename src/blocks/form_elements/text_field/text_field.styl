@@ -6,9 +6,10 @@ placeholder-input(color)
 
 
 .text_field__wrap
-   legend 
+   .text-field__title
       bold()
       uppercase()
+      display block
    input 
       width: 320px
       // height: 44px
@@ -38,9 +39,13 @@ input:focus::-moz-placeholder { color:$black--75 }
    -webkit-background-clip: text
    color: transparent 
    // vertical-align: middle
-   margin-left -30px
-   margin-top 10px
+   right 10px
+   top 30px
    position: absolute
 
 .field
    margin-bottom 10px
+   position: relative
+
+.text_field__wrap .field__subs
+   width: 267px;
