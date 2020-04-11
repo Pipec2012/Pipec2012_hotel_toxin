@@ -1,10 +1,44 @@
 .data_dropdown__head
    bold()
    uppercase()
+
+
+.data_dropdown__body
+   display flex
+   flex-wrap: wrap
+
+.data_dropdown__arrow
+   position absolute
+   right: 10px;
+   top: 30px;
+   color: $black--50
+
+
+//Диапазон дат
 .data_dropdown__title
-   margin-bottom 15px
+   max-width 150px
+   bold()
+   uppercase()
+   margin-right 20px
+   position relative
 
+.data_dropdown__title:last-child
+   margin-right 0
 
+.data_dropdown__input
+   margin-top 5px
+   width: 150px;
+   height: 44px;
+  
+   border: 1px solid $black--25;
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding: 15px 10px
+   
+
+// Стили календаря
+
+// Общие стили
 .datepicker 
    font-size: 0.8571rem
    width: 320px;
@@ -20,6 +54,18 @@
 
 .datepicker--content
    margin-top 15px
+.datepicker--days-names
+   width 90%
+   margin: 0 auto 
+   justify-content: center
+
+.datepicker--day-name
+   font-size: 0.8571rem
+   text-transform: none
+.datepicker--day-name,.datepicker--button-apply
+   bold()
+
+// Стили ячеек
 
 .datepicker--cells
    margin-top 15px
@@ -28,6 +74,7 @@
 .datepicker--cell
    width: 40.14px;
    height: 40.44px;
+
 .datepicker--cell-day.-current-
    width: 39.88px;
    height: 40px;
@@ -54,6 +101,7 @@
    border-radius: 50%
    opacity: 0.5;
 
+// Выбор диапазона
 .-range-from-.-selected-:after
    content: ""
    display: block
@@ -74,20 +122,37 @@
    z-index -2
    border-radius: 50% 100px 100px 50%;
 
-
+.datepicker--cell.-current-.-in-range-
+   width: 39.88px;
+   height: 40px;
+   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+   color: white
+   font-weight: bold;
+   border-radius: 0
+   
+.datepicker--cell.-in-range-.-focus-
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   color: $black
+   border-radius: 0
+   opacity: 0.5;
 
 .datepicker--cell.-in-range-
    background: linear-gradient(180deg,#bc9cff40,#8ba4f940);
    color: $black
-   
-.datepicker--day-name,.datepicker--button-apply
+
+// Стили Кнопок
+.datepicker--buttons
+   border: none
+   margin-top 5px
+.datepicker--button
    bold()
+   uppercase()
+   color: $black--50
+
 .datapicker_arrow,.datepicker--day-name,.datepicker--button-apply
    color: $purple
 
-.datepicker--button-apply
-   uppercase()
-
-.datepicker--button:hover
-   background: none
+.datepicker--button-apply:hover
    color: $black--50
+
+
