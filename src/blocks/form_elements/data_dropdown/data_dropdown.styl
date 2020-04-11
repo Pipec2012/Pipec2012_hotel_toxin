@@ -1,18 +1,32 @@
-.data_dropdown__head
-   bold()
-   uppercase()
 
 
 .data_dropdown__body
    display flex
    flex-wrap: wrap
-
+   
 .data_dropdown__arrow
    position absolute
    right: 10px;
    top: 30px;
    color: $black--50
 
+//Фильтр дат
+.filter_dropdown__title
+   bold()
+   uppercase()
+   max-width 265px
+   position relative
+
+.filter_dropdown__input
+   margin-top 5px
+   width: 266px;
+   height: 44px;
+
+   border: 1px solid $black--25;
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding: 10px 15px
+   text-transform: lowercase
 
 //Диапазон дат
 .data_dropdown__title
@@ -33,7 +47,7 @@
    border: 1px solid $black--25;
    box-sizing: border-box;
    border-radius: 4px;
-   padding: 15px 10px
+   padding: 10px 15px
    
 
 // Стили календаря

@@ -3,17 +3,16 @@ mixin data_dropdown(options)
    -
    
    if (options.filter === true)
-      .data_dropdown__wrap
-         .data_dropdown__head
-            div(class= options.title ? "data_dropdown__title" : "")= options.title ? options.title : ""
+      .filter_dropdown__wrap
          .data_dropdown__body
-            input(type="text" id="filter_data" autocomplete="nope")
-            i.material-icons.checkbox__arrow expand_more
+            label(class= options.title ? "filter_dropdown__title" : "")= options.title ? options.title : ""
+               input.filter_dropdown__input(type="text" id="filter_dropdown" autocomplete="nope" data-range="true" data-multiple-dates-separator=" - ")
+               i.material-icons.data_dropdown__arrow expand_more
    else
       .data_dropdown__wrap
          .data_dropdown__body
             label.data_dropdown__title= options.nameOne
-               input.data_dropdown__input(type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="nope" id="range_start" data-range="true")
+               input.data_dropdown__input(type="text" placeholder="ДД.ММ.ГГГГ" autocomplete="nope" id="range_start" data-range="true" data-multiple-dates-separator="-")
                i.material-icons.data_dropdown__arrow expand_more
             label.data_dropdown__title= options.nameTwo
                input.data_dropdown__input(type='text' placeholder="ДД.ММ.ГГГГ" id='range_end')
