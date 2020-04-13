@@ -1,5 +1,5 @@
 mixin dropdown(options)
-	.dropdown__wrap
+	.dropdown__wrap(class=options.big ? "dropdown__large" : "")
 		.dropdown__title= options.title
 		.dropdown__head
 			.head__title= options.headTitle

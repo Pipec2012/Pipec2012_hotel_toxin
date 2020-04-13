@@ -1,11 +1,16 @@
+.dropdown__wrap
+   max-width 266px
+   position relative
+
 .dropdown__title
    bold()
    uppercase()
-   margin-bottom 15px
+   margin-bottom 5px
 
 .option__name
    bold()
    uppercase()
+
 .calc__btn
    border: 1px solid $black--50
    border-radius: 50%  
@@ -23,13 +28,13 @@
    display flex
    align-items: center
    justify-content space-between
-   width: 266px
+   width: 100%
    border: 1px solid $black--25
    box-sizing: border-box;
    border-radius: 4px 4px 0 0;
    padding: 10px 12px 
    color: $black--75
-
+   
 .dropdown__head:hover
    border: 1px solid $black--50
 
@@ -42,14 +47,13 @@
 .dropdown__options
    position: absolute
    background: white
-   width: 266px
+   width: 100%
    border: 1px solid $black--50
    box-sizing: border-box;
    border-radius: 0 0 4px 4px;
    padding: 13px 12px 13px 12px
    border-top: none
    opacity: 1
-   max-height: 100%
    transition(0.3s)
 
 .dropdown--hidden 
@@ -106,3 +110,5 @@
 .hidden
    visibility hidden
    
+.dropdown__large
+   max-width 320px
