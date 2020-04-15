@@ -1,0 +1,31 @@
+mixin booking_card(options)
+   
+   .booking_card__wrap
+      .booking_card__title
+         span.booking_card__info № 
+            span.room_number= options.roomNumber ? options.roomNumber : "888"
+            span= options.luxury ? "люкс" : ""
+         p.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
+            span  в сутки
+      +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "booking_card"})
+      +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
+                  elems: [
+                     {name: "взрослые"},
+                     {name: "дети"},
+                     {name: "младенцы"}
+                  ]
+                  })
+      ul.booking_card__calculate_list
+         li
+            span 9 990₽ х 4 суток
+            span 39 960₽
+         li
+            span Сбор за услуги: скидка 2 179₽
+            span 0₽
+         li
+            span Сбор за дополнительные услуги
+            span 300₽
+         li.total_price
+            span Итого
+            span 38 081₽
+      +button({name: "Забронировать", arrowBtn: true})

@@ -1,12 +1,10 @@
-include ../../form_elements/data_dropdown/data_dropdown
-include ../../form_elements/dropdown/dropdown
 
-mixin room_search()
+mixin room_search_card()
    
-   .room_search__wrap
-      .room_search__title
+   .room_search_card__wrap
+      .room_search_card__title
          h1 Найдём номера под ваши пожелания
-      .room_search__body
+      .room_search_card__body
          +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "room_search"})
          +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
                   elems: [

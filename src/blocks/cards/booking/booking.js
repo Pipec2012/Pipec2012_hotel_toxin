@@ -1,7 +1,7 @@
 
 /** Для диапазона дат с двумя input */
 
-$('#range_start-room_search').datepicker({ 
+$('#range_start-booking_card').datepicker({ 
    clearButton:true,
   //  inline: true, /* Делает календарь видимым всегда*/
    navTitles: {
@@ -10,8 +10,8 @@ $('#range_start-room_search').datepicker({
     years: 'yyyy1 - yyyy2'
     },
    onSelect: function (fd, d, picker) { 
-     $("#range_start-room_search").val(fd.split("-")[0]);
-     $("#range_end-room_search").val(fd.split("-")[1]);
+     $("#range_start-booking_card").val(fd.split("-")[0]);
+     $("#range_end-booking_card").val(fd.split("-")[1]);
     
    },
    onShow(inst, animationCompleted) {
@@ -27,8 +27,8 @@ $('#range_start-room_search').datepicker({
     },
     nextHtml: '<span class="material-icons datapicker_arrow">arrow_forward</span>',
     prevHtml: '<span class="material-icons datapicker_arrow">arrow_back</span>',
-    showDatapicker: $('#range_end-room_search').on('click', function (ev) {
-      var myDatepicker = $('#range_start-room_search').data('datepicker');
+    showDatapicker: $('#range_end-booking_card').on('click', function (ev) {
+      var myDatepicker = $('#range_start-booking_card').data('datepicker');
 
       myDatepicker.show();
     })
