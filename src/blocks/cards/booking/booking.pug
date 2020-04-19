@@ -1,34 +1,35 @@
 mixin booking_card(options)
    
    .booking_card__wrap
-      .booking_card__title
-         span.booking_card__info № 
-            span.room_number= options.roomNumber ? options.roomNumber : "888"
-            span(class = options.luxury ? "room_number__lux" : "")= options.luxury ? " люкс" : ""
-         p.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
-            span  в сутки
-      +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "booking_card"})
-      +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
-                  elems: [
-                     {name: "взрослые"},
-                     {name: "дети"},
-                     {name: "младенцы"}
-                  ]
-                  })
-      ul.booking_card__calculate_list
-         li
-            span.calculate__column 9 990₽ х 4 суток
-            span.result__column 39 960₽
-         li
-            span.calculate__column Сбор за услуги: скидка 2 179₽
-            span.calculate__tooltip i
-            span.result__column 0₽
-         li
-            span.calculate__column Сбор за дополнительные услуги
-            span.calculate__tooltip i
-            span.result__column 300₽
-         li.total_price
-            span Итого
-            span.calculate__line
-            span.calculate_total__price 38 081₽
-      +button({name: "Забронировать", arrowBtn: true})
+      form()#booking_card
+         .booking_card__title
+            span.booking_card__info № 
+               span.room_number= options.roomNumber ? options.roomNumber : "888"
+               span(class = options.luxury ? "room_number__lux" : "")= options.luxury ? " люкс" : ""
+            p.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
+               span  в сутки
+         +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "booking_card"})
+         +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
+                     elems: [
+                        {name: "взрослые"},
+                        {name: "дети"},
+                        {name: "младенцы"}
+                     ]
+                     })
+         ul.booking_card__calculate_list
+            li
+               span.calculate__column 9 990₽ х 4 суток
+               span.result__column 39 960₽
+            li
+               span.calculate__column Сбор за услуги: скидка 2 179₽
+               span.calculate__tooltip i
+               span.result__column 0₽
+            li
+               span.calculate__column Сбор за дополнительные услуги
+               span.calculate__tooltip i
+               span.result__column 300₽
+            li.total_price
+               span Итого
+               span.calculate__line
+               span.calculate_total__price 38 081₽
+         +button({name: "Забронировать", arrowBtn: true})
