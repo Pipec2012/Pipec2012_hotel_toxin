@@ -1,9 +1,19 @@
 mixin room(options)
-   -
-   .room__wrap
-      .room__photo_slider
+   - let i = 1
+   .room_wrap
+      .room_photo__slider
          each elem in options.elems
-         
-            img(src="#", alt="")
             
-      .room__info test
+            img(src="./blocks/cards/room/img/room__photo_" + i + ".png", alt="фото номера")
+            - i++
+      .room_info
+         ul
+            li.room_info__item №
+               p= options.roomNumber ? options.roomNumber : "888"
+                  span(class = options.luxury ? "room_number__lux" : "")= options.luxury ? " люкс" : ""
+               p= options.roomPrice? options.roomPrice : "9 990₽"
+                  span в сутки
+            li.room_info__item
+               +rate_button({starsActive: 5})
+               p= options.roomReviews? options.roomReviews : "145"
+                span Отзывов
