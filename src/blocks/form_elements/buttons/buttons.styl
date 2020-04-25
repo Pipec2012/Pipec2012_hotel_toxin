@@ -1,81 +1,96 @@
 .button_wrap
-   font-size: 12px
+   font-size: 0.8571rem
    max-height: 45px
 
 .button__title
    bold()
    uppercase()
    margin-bottom 15px
+   font-size: 0.8571rem
 
-/* Стандартные кнопки с градиентом и рамкой  */
-
-height_btn = 40px
-border_radius_btn = 22px
-max_widh = 320px
-min_width = 50px
-
-.btn
-   padding 0 20px
-   font-size: 12px
-.gradient__button
-   max-width: max_widh
-   min-width: min_width
-   
-   height height_btn
-   display: flex
-   align-items: center
-   justify-content center
+.button_body
    uppercase()
    bold()
-   font-weight: 700
-   padding 2px 2px
-   color: white 
-   background $gradient
-   border-radius: border_radius_btn
-   box-sizing: content-box
-
-
-.border-gradient
-   max-width: max_widh
-   min-width: (min_width - 3)
-   box-sizing: content-box
-   display: flex
-   align-items: center
-   justify-content center
-   height height_btn
-   border-radius: (border_radius_btn + 2)
-
-   color: $purple
-   font-weight: bold
-   background: white
- 
-.gradient__button:hover
-   gradient--50()  
-
 
 /* Текстовая кнопка  */
 
-.button__text
+.text__btn
    uppercase()
    bold()
    color: $purple
+   cursor pointer
 
-.button__text:hover
+.text__btn:hover
    color: $black--50
 
+ /* кнопка для отправки данных со стрелкой */
 
-/* Кнопка со стрелкой  */
-
-.button__arrow
+.buttton__submit
+   width: 320px;
+   height: 44px;
+   cursor pointer
+   bold()
+   uppercase()
    
-   width 316px
-   
+   gradient()
+   border-radius: 22px;
    display flex
    align-items: center
    justify-content: center
+   color: white
+   position relative
 
-.gradient__button .material-icons
-   
+.buttton__submit .material-icons
+   right  15px
+   position absolute
+
+.buttton__submit:hover
+   gradient--50()  
+
+ /* кнопка с рамкой для перехода или отрытия событий */
+
+.border__btn
    display: flex
    align-items: center
-   margin-left -35px
+   justify-content: center
+   position: relative;
+   max-width: 99px;
+   padding: 0 20px
+   color: $purple
+   
+   height: 44px;
+   box-sizing: content-box
+   border-radius: 22px;
+   background: #fff;
+
+.border__btn:after
+   content: "";
+   position: absolute;
+   top: -2px;
+   bottom: -2px;
+   left: -2px;
+   right: -2px;
+   gradient()
+   border-radius: 22px + 2;
+   z-index: -1;
+
+.border__btn:hover:after
+   gradient--50()
+
+/* кнопка с заливкой для перехода или отрытия событий */
+
+.fill__btn
+   gradient()
+   display: flex
+   align-items: center
+   justify-content: center
+   position: relative;
+   max-width: 99px;
+   padding: 0 20px
+   box-sizing: content-box
+   border-radius: 22px;
+   height: 44px;
+   color white
+
+.fill__btn:hover
+   gradient--50()

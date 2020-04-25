@@ -6,10 +6,14 @@ $black--5 = rgba(31, 32, 65, 0.05)
 $purple = #BC9CFF
 $green = #6FCF97 
     /* Основной градиент сайта голубой + фиолетовый*/
-$gradient = linear-gradient(#BC9CFF, #8BA4F9);
+
 gradient--50() {
     background: linear-gradient( #bc9cff80, #bc9cff80);
 }
+gradient() {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+ 
     
 $bold = 'Quicksand-Bold'
     
@@ -18,7 +22,7 @@ uppercase()
     text-transform: uppercase
 
 bold()
-    font-family: 'Quicksand-Bold','Montserrat-Bold', sans-serif
+    font-family: 'Montserrat-Bold', sans-serif
     font-weight: 800
     color: $black
 

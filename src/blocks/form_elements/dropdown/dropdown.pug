@@ -11,12 +11,12 @@ mixin dropdown(options)
 				li.dropdown__option
 					span.option__name= elem.name
 					.calc
-						button.calc__btn.btn_minus.disabled
+						button(type="button").calc__btn.btn_minus.disabled
 							i.material-icons remove
 						input.quantity(type="text" value="0" disabled)
-						button.calc__btn.btn_plus
+						button(type="button").calc__btn.btn_plus
 							i.material-icons add
 						
 			.dropdown__controls
 				span.dropdown__clear.hidden Очистить
-				span.dropdown__select Применить
+				+button({name: "Применить"})

@@ -1,10 +1,12 @@
 .dropdown__wrap
    max-width 266px
    position relative
+   z-index 99
 
 .dropdown__title
    bold()
    uppercase()
+   font-size: 0.8571rem
    margin-bottom 5px
 
 .option__name
@@ -63,9 +65,6 @@
    overflow: hidden;
    opacity: 0;
 
-
-
-
 .dropdown__option 
    display flex
    align-items: center
@@ -101,6 +100,9 @@
 
 .dropdown__clear
    color: $black--50
+
+.dropdown__clear:hover
+   color: $black--75
 
 .disabled
    color: $black--25

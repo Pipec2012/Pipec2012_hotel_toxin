@@ -1,31 +1,30 @@
 mixin button(options)
 
    .button_wrap
-      if (options.textBtn === true)
+      if (options.submit === true)  /* кнопка для отправки данных со стрелкой */
+         .button_head
+            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
          .button_body
-            a(href="#") 
-               .button__text=options.name
-
-      else if (options.arrowBtn === true)
-         .button_body
-            a(href="#") 
-               .gradient__button 
-                  .button__arrow(class=options.gradientBorder ? "border-gradient" : "")=options.name
-                  span
-                     i.material-icons arrow_forward
-
-      else if (options.title === undefined)
-         .button_body
-            a(href="#") 
-               .gradient__button 
-                  .btn(class=options.gradientBorder ? "border-gradient" : "")=options.name
+            button(type="submit").buttton__submit=options.name
+               i.material-icons arrow_forward
       
+      else if (options.border === true)  /* кнопка с рамкой для перехода или отрытия событий */
+         .button_head
+            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+         .button_body
+            a(href="#")
+               .buttton__link.border__btn= options.name
+
+      else if (options.fill === true) /* кнопка с заливкой для перехода или отрытия событий */
+         .button_head
+            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+         .button_body
+            a(href="#")
+               .buttton__link.fill__btn= options.name
+
       else
          .button_head
-            .button__title= options.title
+            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
          .button_body
-            a(href="#") 
-               .gradient__button 
-                  .btn(class=options.gradientBorder ? "border-gradient" : "")=options.name
-
-      
+            button(type="button").text__btn= options.name
+               
