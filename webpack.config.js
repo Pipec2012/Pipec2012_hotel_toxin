@@ -41,7 +41,7 @@ module: {
     //     }
     // },
     {
-        test: /\.(eot|ttf|svg|woff|woff2|otf)$/,
+        include: /\.(eot|ttf|svg|woff|woff2|otf)$/,
         exclude: /img/,
         use: [
             {
@@ -56,7 +56,7 @@ module: {
     // outputPath: './',
                         // useRelativePath: true
     {
-            test: /\.(png|jpg|svg|gif)$/,
+            include: /\.(png|jpg|svg|gif)$/,
             exclude: /fonts|node_modules/,
             use: [
                 {

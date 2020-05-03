@@ -6,7 +6,8 @@ mixin booking_card(options)
             span.booking_card__info № 
                span.room_number= options.roomNumber ? options.roomNumber : "888"
                span(class = options.luxury ? "room_number__lux" : "")= options.luxury ? " люкс" : ""
-            p.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
+            p
+               span.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
                span  в сутки
          +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "booking_card"})
          +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,

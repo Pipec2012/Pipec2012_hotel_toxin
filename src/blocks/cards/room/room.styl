@@ -13,12 +13,48 @@
       width 100%
       border-radius: 4px 4px 0 0
 
+.room_info
+   padding: 20px 20px
+
+.room_info__item
+   display: flex
+   flex-wrap: wrap
+   justify-content: space-between
+   align-items: center
+
+.room_number__block
+   bold()
+
+.room_number
+   font-size: 1.3571rem
+
+.room_price__block, .room_reviews__block
+   color: $black--50
+
+.room_price, .numbers_reviews
+   bold--50()
+
+.room_info__item:not(:last-child):after
+   content: ""
+   display inline-block
+   width: 230px;
+   height: 1px;
+   margin: 10px 0
+
+   background: rgba(31, 32, 65, 0.1);
+
+.room_number__lux
+   font-size: 0.8571rem;
+   uppercase()
+
+// стрелки слайдера
 
 .room_slider__next, .room_slider__prev
    position absolute
    top: 40%
    color: white
    font-size: 1.7143rem;
+   cursor pointer
 
 
 .room_slider__next
@@ -27,3 +63,70 @@
 .room_slider__prev
    left 5%
    z-index 100
+
+
+// точки слайдера
+
+.slick-dotted.slick-slider
+   margin-bottom: 0;
+
+.slick-dots
+   position: absolute;
+   bottom: 20px;
+   left 73%
+   display: block;
+
+   max-width: 65px;
+   padding: 0;
+   margin: 0;
+
+   list-style: none;
+
+   text-align: center;
+
+.slick-dots li
+   width: 6.5px;
+   height: 0;
+   margin: 0 3.5px;
+   padding: 0;
+
+   cursor: pointer;
+
+.slick-dots li button
+   font-size: 0;
+   line-height: 0;
+
+   display: block;
+
+   width: 0;
+   height: 0;
+   padding: 0;
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+   opacity: 1;
+
+.slick-dots li button:before
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   width: 6.5px;
+   height: 6.5px;
+
+   content: ' ';
+   text-align: center;
+
+   opacity: 1;
+   color: none;
+   border: 1px solid white
+   border-radius: 50%
+   box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+.slick-dots li.slick-active button:before
+
+   opacity: 1;
+   background: white;
+

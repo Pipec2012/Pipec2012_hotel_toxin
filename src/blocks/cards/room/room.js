@@ -2,7 +2,7 @@ let _ = require('slick-carousel');
 
    $(document).ready(function(){
       $('.room_photo__slider').slick({
-         // dots: true,
+         dots: true,
          infinite: true,
          slidesToShow: 1,
          
