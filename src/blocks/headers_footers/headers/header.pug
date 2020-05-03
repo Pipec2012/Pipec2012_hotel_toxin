@@ -1,0 +1,23 @@
+mixin header(options)
+    
+	.header_wrap
+		.header
+			.header__logo
+				a(href="#").logo__link
+					img(src="./blocks/headers_footers/headers/img/logo_toxin.svg", alt="#")
+					img(src="./blocks/headers_footers/headers/img/logo_text_toxin.svg", alt="#")
+			.header_navbar__block
+				nav.navbar_wrapper
+					ul
+						each elem in options.elems    
+							li
+								a.navbar__link(href="#")= elem.menuName ? elem.menuName : "Home"
+									-  if(elem.dropdown === true)
+										i.material-icons.navbar__arrow expand_more
+						
+				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Cosmin Negoita
+		
+				.navbar_login__block(class= options.userLogin ? "-hidden-" : "")
+					+button({border: true, name: "Login"})
+
+					+button({name: "Register", fill: true})
