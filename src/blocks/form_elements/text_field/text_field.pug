@@ -2,11 +2,11 @@ mixin text_field(options)
 	
 	.text_field__wrap
 		-
-		
-		if	(options.subs === true)
-			.field
+		 
+		if	(options.subscription === true)
+			.field.field__subs
 				label(class= options.title ? "text-field__title" : "")=options.title ? options.title : ""
-				input.field__subs(type= options.type ? options.type : "email"
+				input(type= options.type ? options.type : "email"
 					placeholder= options.placeholder ? options.placeholder : "Email" required)
 				a(href="#").subs__btn
 					i.material-icons.text-field_arrow arrow_forward

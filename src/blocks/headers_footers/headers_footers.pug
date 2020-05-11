@@ -1,5 +1,5 @@
 include ./headers/header
-
+include ./footers/footer
 
 +header({userLogin: false, elems: [
    {menuName: "Home"},
@@ -18,3 +18,11 @@ include ./headers/header
    {menuName: "News"},
    {menuName: "Documentation"},
 ]})
+
++footer({elems_nav: ["About Us", "News", "Support", "Products"],
+         elems_about_us: ["Who we are", "Our team", "Careers", "Investors"],
+         elems_Support: ["Documentation", "Community", "Get in Touch"],
+         social_icons: ["d"]
+         })
+
++footer({creative: true})
