@@ -98,6 +98,12 @@ module: {
 
     plugins: [
         new HtmlWebpackPlugin({
+            inject: false,
+            // hash: true,
+            template: PATH.source + '/landing_page.pug',
+            filename: './landing_page.html',
+        }),
+        new HtmlWebpackPlugin({
             // inject: false,
             // hash: true,
             template: PATH.source + '/ui_kit.pug',
