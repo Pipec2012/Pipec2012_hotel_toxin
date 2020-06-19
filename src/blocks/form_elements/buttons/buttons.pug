@@ -1,30 +1,33 @@
 mixin button(options)
 
-   .button_wrap
       if (options.submit === true)  /* кнопка для отправки данных со стрелкой */
-         .button_head
-            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
-         .button_body
-            button(type="submit").buttton__submit=options.name
-               i.material-icons arrow_forward
+         .button_submit_wrap.button_wrap 
+            .button_head
+               div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+            .button_body
+               button(type="submit").buttton__submit=options.name
+                  i.material-icons arrow_forward
       
       else if (options.border === true)  /* кнопка с рамкой для перехода или отрытия событий */
-         .button_head
-            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
-         .button_body
-            a(href="#")
-               .buttton__link.border__btn= options.name
+         .button_border_wrap.button_wrap
+            .button_head
+               div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+            .button_body
+               a(href="#")
+                  .buttton__link.border__btn= options.name
 
       else if (options.fill === true) /* кнопка с заливкой для перехода или отрытия событий */
-         .button_head
-            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
-         .button_body
-            a(href="#")
-               .buttton__link.fill__btn= options.name
+         .button_fill_wrap.button_wrap
+            .button_head
+               div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+            .button_body
+               a(href="#")
+                  .buttton__link.fill__btn= options.name
 
       else
-         .button_head
-            div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
-         .button_body
-            button(type="button").text__btn= options.name
+         .button_text_wrap.button_wrap
+            .button_head
+               div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
+            .button_body
+               button(type="button").text__btn= options.name
                

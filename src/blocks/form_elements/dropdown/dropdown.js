@@ -18,7 +18,7 @@ function showDropdown() {
       if (checkClass) {
          dropdown_head.classList.add('dropdown--active');
          dropdown_body.classList.remove('dropdown--hidden');
-      } else {
+      } else { 
          dropdown_body.classList.add('dropdown--hidden');
          dropdown_head.classList.remove('dropdown--active');
       }

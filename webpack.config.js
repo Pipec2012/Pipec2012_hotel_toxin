@@ -98,7 +98,7 @@ module: {
 
     plugins: [
         new HtmlWebpackPlugin({
-            inject: false,
+            // inject: false,
             // hash: true,
             template: PATH.source + '/landing_page.pug',
             filename: './landing_page.html',

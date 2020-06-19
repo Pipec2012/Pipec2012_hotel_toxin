@@ -1,6 +1,10 @@
 extends layout/page
+include blocks/cards/room_search/room_search
 
 block title
    | Landing page
 block content
-   
+   main.landing_wrap
+      .landing_content
+         +room_search_card()
+         p.landing_text Лучшие номера для вашей работы, отдыха и просто вдохновения
