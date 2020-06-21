@@ -12,10 +12,10 @@ mixin data_dropdown(options)
    else
       .data_dropdown__wrap
          .data_dropdown__body
-            label.data_dropdown__title= options.nameOne
+            label.data_dropdown__title= options.firstDataName
                input.data_dropdown__input(type="text" placeholder="ДД.ММ.ГГГГ" id="range_start" + idName data-range="true" data-multiple-dates-separator="-")
                i.material-icons.data_dropdown__arrow expand_more
-            label.data_dropdown__title= options.nameTwo
+            label.data_dropdown__title= options.lastDataName
                input.data_dropdown__input(type='text' placeholder="ДД.ММ.ГГГГ" id='range_end' + idName)
                i.material-icons.data_dropdown__arrow expand_more
          

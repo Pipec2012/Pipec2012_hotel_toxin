@@ -19,10 +19,10 @@ mixin checkbox(options, ...items)
                      span.check__box
                         i.fas.fa-check.checkbox__done
                      = item
-   if (options.boldTitle === true)
-      .checkbox_wrap
-         .checkbox__title= options.title
-         ul.checkbox__options
+   if (options.richCheckbox === true)
+      .rich_checkbox_wrap
+         .rich_checkbox__title= options.title
+         ul.rich_checkbox__options
             each elem in options.elems
                li
                   label.checkbox__option
