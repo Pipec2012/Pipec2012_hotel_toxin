@@ -22,51 +22,53 @@ mixin footer(options)
 
    else
       .footer_wrap
-         .footer_widgets
-            .footer_logo__block
-               .footer_logo__wrap
-                  a(href="#").logo__link
-                     img(src="./blocks/headers_footers/footers/img/logo_toxin.svg", alt="#")
-                     img(src="./blocks/headers_footers/footers/img/logo_text_toxin.svg", alt="#")
-               .footer_logo__text
-                  p= options.logoText ? options.logoText : "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-            .footer_navigation__block
-               ul.footer_navigation__column
-                  li.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "Navigation"
-                  each elem in options.elems_nav
-                     li.footer_navigation__link
-                        a(href="#")= elem
+         .footer_widgets_wrap
+            .footer_widgets
+               .footer_logo__block
+                  .footer_logo__wrap
+                     a(href="#").logo__link
+                        img(src="./blocks/headers_footers/footers/img/logo_toxin.svg", alt="#")
+                        img(src="./blocks/headers_footers/footers/img/logo_text_toxin.svg", alt="#")
+                  .footer_logo__text
+                     p= options.logoText ? options.logoText : "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+               .footer_navigation__block
+                  ul.footer_navigation__column
+                     li.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "Navigation"
+                     each elem in options.elems_nav
+                        li.footer_navigation__link
+                           a(href="#")= elem
 
-               ul.footer_navigation__column
-                  li.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "ABOUT US"
-                  each elem in options.elems_about_us
-                     li.footer_navigation__link
-                        a(href="#")= elem
+                  ul.footer_navigation__column
+                     li.footer_navigation__title= options.columnTitile_2 ? options.columnTitile_2 : "ABOUT US"
+                     each elem in options.elems_about_us
+                        li.footer_navigation__link
+                           a(href="#")= elem
 
-               ul.footer_navigation__column
-                  li.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "Support"
-                  each elem in options.elems_Support
-                     li.footer_navigation__link
-                        a(href="#")= elem
+                  ul.footer_navigation__column
+                     li.footer_navigation__title= options.columnTitile_3 ? options.columnTitile_3 : "Support"
+                     each elem in options.elems_Support
+                        li.footer_navigation__link
+                           a(href="#")= elem
 
-            .footer_subscribe__block
-               p.footer_subscribe__title=options.subscribeTitle ? options.subscribeTitle : "Subscribe to our newsletter"
-               p.footer_subscribe__text=options.subscribeText ? options.subscribeText : "Receive our latest news and promotions in your inbox!"
-               +text_field({ subscription: true, 
-                              elems: [
-                              {placeholder: "Your email address"}
-                              ]})
-         .footer_copyright_bar
-            .copyright_bar__text Copyright © 2018 Toxin UI Kit. All rights reserved.
-            .copyright_bar__social_icons
-               ul.social_icons__list
-                  li.social_icons__item
-                     a(href="#")
-                        i(class="fab fa-twitter")
-                  li.social_icons__item
-                     a(href="#")
-                        i(class="fab fa-facebook-square")
-                  li.social_icons__item
-                     a(href="#")
-                        i(class="fab fa-instagram")
+               .footer_subscribe__block
+                  p.footer_subscribe__title=options.subscribeTitle ? options.subscribeTitle : "Subscribe to our newsletter"
+                  p.footer_subscribe__text=options.subscribeText ? options.subscribeText : "Receive our latest news and promotions in your inbox!"
+                  +text_field({ subscription: true, 
+                                 elems: [
+                                 {placeholder: "Your email address"}
+                                 ]})
+         .footer_copyright_bar_wrap
+            .footer_copyright_bar
+               .copyright_bar__text=options.copyrightText ? options.copyrightText : "Copyright © 2018 Toxin UI Kit. All rights reserved."
+               .copyright_bar__social_icons
+                  ul.social_icons__list
+                     li.social_icons__item
+                        a(href="#")
+                           i(class="fab fa-twitter")
+                     li.social_icons__item
+                        a(href="#")
+                           i(class="fab fa-facebook-square")
+                     li.social_icons__item
+                        a(href="#")
+                           i(class="fab fa-instagram")
                      

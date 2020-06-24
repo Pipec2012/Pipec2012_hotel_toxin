@@ -1,7 +1,7 @@
 include ../../form_elements/buttons/buttons
 
 mixin header(options)
-	
+	- let i = 1
 	.header_wrap
 		.header
 			.header__logo
@@ -12,10 +12,11 @@ mixin header(options)
 				nav.navbar_wrapper
 					ul
 						each elem in options.elems    
-							li
+							li(class= (!options.homeVisibe & i==1) ? "-hidden-" : "")
 								a.navbar__link(href="#")= elem.menuName ? elem.menuName : "Home"
 									-  if(elem.dropdown === true)
 										i.material-icons.navbar__arrow expand_more
+							-	i++
 						
 				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Cosmin Negoita
 		

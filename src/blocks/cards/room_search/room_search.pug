@@ -11,7 +11,7 @@ mixin room_search_card()
          .room_search_card__title
             h1 Найдём номера под ваши пожелания
          .room_search_card__body
-            +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "room_search"})
+            +data_dropdown({firstDataName: "прибытие", lastDataName: "выезд", id: "room_search"})
             +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
                      elems: [
                         {name: "взрослые"},

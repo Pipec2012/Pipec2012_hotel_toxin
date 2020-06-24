@@ -13,7 +13,7 @@ mixin booking_card(options)
             p
                span.room_price= options.roomPrice ? options.roomPrice : "9 990₽"
                span  в сутки
-         +data_dropdown({nameOne: "прибытие", nameTwo: "выезд", id: "booking_card"})
+         +data_dropdown({firstDataName: "прибытие", lastDataName: "выезд", id: "booking_card"})
          +dropdown({title: "гости", headTitle: "Сколько гостей", big: true,
                      elems: [
                         {name: "взрослые"},
