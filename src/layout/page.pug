@@ -20,12 +20,11 @@ html(lang="ru")
    body
       
       +header({userLogin: false, elems: [
-               {menuName: "Главная"},
                {menuName: "О нас"},
-               {menuName: "Услуги",dropdown: true},
+               {menuName: "Услуги", dropdown: true},
                {menuName: "Вакансии"},
                {menuName: "Новости"},
-               {menuName: "Соглашения"},
+               {menuName: "Соглашения", dropdown: true},
             ]})
       block content
 

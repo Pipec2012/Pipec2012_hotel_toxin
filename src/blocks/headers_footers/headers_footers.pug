@@ -1,28 +1,33 @@
 include ./headers/header
 include ./footers/footer
 
-+header({userLogin: false, homeVisibe: true, elems: [
-   {menuName: "Home"},
-   {menuName: "About Us"},
-   {menuName: "Services",dropdown: true},
-   {menuName: "Careers"},
-   {menuName: "News"},
-   {menuName: "Documentation"},
-]})
++header({userLogin: false, navActive: true, elems: [
+            {menuName: "О нас"},
+            {menuName: "Услуги", dropdown: true},
+            {menuName: "Вакансии"},
+            {menuName: "Новости"},
+            {menuName: "Соглашения", dropdown: true},
+         ]})
 
-+header({userLogin: true, homeVisibe: true, elems: [
-   {menuName: "Home"},
-   {menuName: "About Us"},
-   {menuName: "Services",dropdown: true},
-   {menuName: "Careers"},
-   {menuName: "News"},
-   {menuName: "Documentation"},
-]})
++header({userLogin: true, navActive: true, elems: [
+            {menuName: "О нас"},
+            {menuName: "Услуги", dropdown: true},
+            {menuName: "Вакансии"},
+            {menuName: "Новости"},
+            {menuName: "Соглашения", dropdown: true},
+         ]})
 
-+footer({elems_nav: ["About Us", "News", "Support", "Products"],
-         elems_about_us: ["Who we are", "Our team", "Careers", "Investors"],
-         elems_Support: ["Documentation", "Community", "Get in Touch"],
-         social_icons: [""]
-         })
++footer({logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+         
+               columnTitile_1: "Навигация", columnTitile_2: "О нас", columnTitile_3: "Служба поддержки",
+               
+               elems_nav: ["О нас", "Новости", "Служба поддержки", "Услуги"],
+               elems_about_us: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+               elems_Support: ["Соглашения", "Сообщества", "Связь с нами"],
+
+               subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса",
+               social_icons: [""],
+               copyrightText: "Copyright © 2018 Toxin отель. Все права защищены."
+               })
 
 +footer({creative: true})

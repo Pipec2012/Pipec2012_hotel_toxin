@@ -12,15 +12,15 @@ mixin header(options)
 				nav.navbar_wrapper
 					ul
 						each elem in options.elems    
-							li(class= (!options.homeVisibe & i==1) ? "-hidden-" : "")
-								a.navbar__link(href="#")= elem.menuName ? elem.menuName : "Home"
+							li(class= (options.navActive & i==1) ? "-active-" : "")
+								a.navbar__link(href="#")= elem.menuName ? elem.menuName : "О нас"
 									-  if(elem.dropdown === true)
 										i.material-icons.navbar__arrow expand_more
 							-	i++
 						
-				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Cosmin Negoita
+				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Юлий Цезарь
 		
 				.navbar_login__block(class= options.userLogin ? "-hidden-" : "")
-					+button({border: true, name: "Login"})
+					+button({border: true, name: "Войти"})
 
-					+button({name: "Register", fill: true})
+					+button({name: "Зарегистироваться", fill: true})
