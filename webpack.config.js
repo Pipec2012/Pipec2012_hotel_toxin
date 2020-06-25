@@ -106,6 +106,18 @@ module: {
         new HtmlWebpackPlugin({
             // inject: false,
             // hash: true,
+            template: PATH.source + '/registration_page.pug',
+            filename: './registration_page.html'
+        }),
+        new HtmlWebpackPlugin({
+            // inject: false,
+            // hash: true,
+            template: PATH.source + '/sign_in_page.pug',
+            filename: './sign_in_page.html'
+        }),
+        new HtmlWebpackPlugin({
+            // inject: false,
+            // hash: true,
             template: PATH.source + '/ui_kit.pug',
             filename: './ui_kit.html',
         }),

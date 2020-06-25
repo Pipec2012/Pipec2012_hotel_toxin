@@ -5,7 +5,7 @@ mixin header(options)
 	.header_wrap
 		.header
 			.header__logo
-				a(href="#").logo__link
+				a(href="http://localhost:8080/landing_page.html").logo__link
 					img(src="./blocks/headers_footers/headers/img/logo_toxin.svg", alt="#")
 					img(src="./blocks/headers_footers/headers/img/logo_text_toxin.svg", alt="#")
 			.header_navbar__block
@@ -21,6 +21,6 @@ mixin header(options)
 				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Юлий Цезарь
 		
 				.navbar_login__block(class= options.userLogin ? "-hidden-" : "")
-					+button({border: true, name: "Войти"})
+					+button({border: true, name: "Войти", linkName: "http://localhost:8080/sign_in_page.html"})
 
-					+button({name: "Зарегистироваться", fill: true})
+					+button({name: "Зарегистироваться", fill: true, linkName: "http://localhost:8080/registration_page.html"})

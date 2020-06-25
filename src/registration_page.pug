@@ -1,0 +1,10 @@
+extends layout/page
+include blocks/cards/registration/registration
+
+block title
+   | Registration page
+block content
+   main.registration_wrap
+      .registration_content
+         +registration_card({})
+         

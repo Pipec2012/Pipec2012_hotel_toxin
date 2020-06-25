@@ -13,7 +13,7 @@ mixin button(options)
             .button_head
                div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
             .button_body
-               a(href="#")
+               a(href=options.linkName ? options.linkName : "#")
                   .buttton__link.border__btn= options.name
 
       else if (options.fill === true) /* кнопка с заливкой для перехода или отрытия событий */
@@ -21,7 +21,7 @@ mixin button(options)
             .button_head
                div(class= options.title ? "button__title" : "")= options.title ? options.title : ""
             .button_body
-               a(href="#")
+               a(href=options.linkName ? options.linkName : "#")
                   .buttton__link.fill__btn= options.name
 
       else

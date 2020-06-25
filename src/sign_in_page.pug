@@ -1,0 +1,10 @@
+extends layout/page
+include blocks/cards/sign_in/sign_in.pug
+
+block title
+   | Sign in page
+block content
+   main.sign_in_wrap
+      .sign_in_content
+         +sign_in_card()
+         
