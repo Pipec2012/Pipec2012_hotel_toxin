@@ -7,7 +7,7 @@ mixin data_dropdown(options)
       .filter_dropdown__wrap
          .data_dropdown__body
             label(class= options.title ? "filter_dropdown__title" : "")= options.title ? options.title : ""
-               input.filter_dropdown__input(type="text" id="filter" + idName data-range="true" data-multiple-dates-separator=" - ")
+               input.filter_dropdown__input(type="text" placeholder="19 авг - 23 авг" id="filter" + idName data-range="true" data-multiple-dates-separator=" - ")
                i.material-icons.data_dropdown__arrow expand_more
    else
       .data_dropdown__wrap

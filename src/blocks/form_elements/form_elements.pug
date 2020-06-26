@@ -49,7 +49,9 @@ include ./data_dropdown/data_dropdown
 
 //- +data_dropdown({title: "filter dropdown", filter: true, id: 'data_dropdown'})
 
-+checkbox({title: "expandable checkbox list"}, "Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь")
++checkbox({title: "expandable checkbox list",
+            elems: ["Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь"]
+         })
 
 +checkbox({title: "rich Checkbox Buttons", richCheckbox: true, 
 elems: [
@@ -79,7 +81,7 @@ elems: [
 
 //- +rate_button("rate button")
 
-//- +range_slider({title: "Range Slider"})
++range_slider({title: "Range Slider"})
 
 //- +button({title: "Buttons", submit: true, name: "перейти к оплате"})
 //- +button({name: "click me", fill: true})

@@ -1,25 +1,25 @@
 
-mixin checkbox(options, ...items)
+mixin checkbox(options)
 
-   //- dropdown = false - обычный чекбоксы без выпадающего списка, 
+   //- notDropdown = true - обычный чекбоксы без выпадающего списка, 
    //- title = bold - чекбоксы rich с жирным заголовком
    //- по умолчанию - выпадающий список 
 
    -
-   if (options.dropdown === false)
+   if (options.notDropdown === true)
    
       .checkbox_wrap
          .checkbox__title= options.title
          ul.checkbox__options
-            each item in items
+            each elem in options.elems
                li
                   label.checkbox__option
                      
                      input(type="checkbox")
                      span.check__box
                         i.fas.fa-check.checkbox__done
-                     = item
-   if (options.richCheckbox === true)
+                     = elem
+   else if (options.richCheckbox === true)
       .rich_checkbox_wrap
          .rich_checkbox__title= options.title
          ul.rich_checkbox__options
@@ -34,19 +34,19 @@ mixin checkbox(options, ...items)
                         .label__title_bold= elem.title
                   span.sub__text= elem.subTitle
    else 
-      .checkbox_wrap
+      .dropdown_checkbox_wrap
          .checkbox__head
             .checkbox__title= options.title
                i.material-icons.checkbox__arrow expand_more
          ul.checkbox__options
-            each item in items
+            each elem in options.elems
                li
                   label.checkbox__option
                      
                      input(type="checkbox")
                      span.check__box
                         i.fas.fa-check.checkbox__done
-                     = item
+                     = elem
                      
 
             

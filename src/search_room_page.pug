@@ -1,0 +1,51 @@
+extends layout/page
+include blocks/cards/room/room
+include blocks/form_elements/range_slider/range_slider
+include blocks/form_elements/data_dropdown/data_dropdown
+include blocks/form_elements/dropdown/dropdown
+include blocks/form_elements/checkbox/checkbox
+
+block title
+   | Search room page
+block content
+   main.search_room_page
+      .search_room_content
+         .filter_column
+            +data_dropdown({title: "даты пребывания в отеле", filter: true, id: 'data_dropdown'})
+            +dropdown({title: "Гости", headTitle: "Сколько гостей",
+                        elems: [
+                           {name: "взрослые"},
+                           {name: "дети"},
+                           {name: "младенцы"}
+                        ]
+                        })
+            +range_slider({title: "диапазон цены", subTitle: "Стоимость за сутки пребывания в номере"})
+            +checkbox({title: "Checkbox Buttons", notDropdown: true,
+                     elems: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
+                     })
+                     
+            +checkbox({title: "доступность", richCheckbox: true, 
+                     elems: [
+                        {title: "Широкий коридор", 
+                        subTitle: "Ширина коридоров в номере не менее 91 см."},
+
+                        {title: "Помощник для инвалидов", 
+                        subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."}
+                     ]})
+            +dropdown({title: "удобства номера", headTitle: "Сколько спален",
+                        elems: [
+                           {name: "спальни"},
+                           {name: "кровати"},
+                           {name: "ванные комнаты"}
+                        ]
+                        })
+            +checkbox({title: "дополнительные удобства",
+                     elems: ["Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь"]
+                     })
+                        
+         .rooms_column
+            +room({elems: [
+                  {luxury: true},
+                  {roomNumber: 840, roomPrice: 9900, starsActive: 4, roomReviews: 65},
+                  
+               ]})

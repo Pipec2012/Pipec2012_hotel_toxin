@@ -118,6 +118,12 @@ module: {
         new HtmlWebpackPlugin({
             // inject: false,
             // hash: true,
+            template: PATH.source + '/search_room_page.pug',
+            filename: './search_room_page.html'
+        }),
+        new HtmlWebpackPlugin({
+            // inject: false,
+            // hash: true,
             template: PATH.source + '/ui_kit.pug',
             filename: './ui_kit.html',
         }),
