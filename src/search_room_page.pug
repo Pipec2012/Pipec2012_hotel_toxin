@@ -4,6 +4,7 @@ include blocks/form_elements/range_slider/range_slider
 include blocks/form_elements/data_dropdown/data_dropdown
 include blocks/form_elements/dropdown/dropdown
 include blocks/form_elements/checkbox/checkbox
+include blocks/form_elements/pagination/pagination
 
 block title
    | Search room page
@@ -44,8 +45,22 @@ block content
                      })
                         
          .rooms_column
-            +room({elems: [
-                  {luxury: true},
-                  {roomNumber: 840, roomPrice: 9900, starsActive: 4, roomReviews: 65},
-                  
-               ]})
+            .rooms_column__title
+               h1 Номера, которые мы для вас подобрали
+            .rooms_block
+               +room({elems: [
+                     {luxury: true},
+                     {roomNumber: 840, roomPrice: 9900, starsActive: 4, roomReviews: 65},
+                     {luxury: true, roomNumber: 980, roomPrice: 8500, starsActive: 3, roomReviews: 35},
+                     {roomNumber: 856, roomPrice: 7300, starsActive: 5, roomReviews: 19},
+                     {roomNumber: 740, roomPrice: 6000, starsActive: 4, roomReviews: 44},
+                     {roomNumber: 982, roomPrice: 5800, starsActive: 3, roomReviews: 56},
+                     {roomNumber: 678, roomPrice: 5500, starsActive: 5, roomReviews: 45},
+                     {roomNumber: 450, roomPrice: 5300, starsActive: 4, roomReviews: 39},
+                     {roomNumber: 350, roomPrice: 5000, starsActive: 3, roomReviews: 77},
+                     {roomNumber: 666, roomPrice: 5000, starsActive: 5, roomReviews: 25},
+                     {roomNumber: 444, roomPrice: 5000, starsActive: 3, roomReviews: 15},
+                     {roomNumber: 352, roomPrice: 5000, starsActive: 3, roomReviews: 55},   
+                  ]})
+            .rooms_pagination
+               +pagination({})

@@ -38,7 +38,7 @@ mixin checkbox(options)
          .checkbox__head
             .checkbox__title= options.title
                i.material-icons.checkbox__arrow expand_more
-         ul.checkbox__options
+         ul.checkbox__options(class= options.checkboxOpen ? "" : "checkbox--hidden checkbox__arrow--rotate")
             each elem in options.elems
                li
                   label.checkbox__option

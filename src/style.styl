@@ -101,8 +101,8 @@ html
 
 .search_room_page
     width 100%
-    margin: 0 auto
-    height 1003px
+    margin: 30px auto 0 auto
+    // height 1003px
 
 .search_room_content
     max-width 1160px
@@ -111,8 +111,45 @@ html
     justify-content: space-between
     padding: 0 20px
 
-// .filter_column
-//     width 270px
+.filter_column
+    display flex
+    flex-wrap: wrap
+    width 266px
+    align-content: flex-start
+
+.filter_column>div
+    margin-top 30px
+
+.filter_column>div:first-child
+    margin-top 0
+
+.filter_column>div:nth-child(2)
+    margin-top 20px
+
 .rooms_column
     width 100%
+    display flex
+    flex-wrap: wrap
+    justify-content: space-between
     margin-left 60px
+
+.rooms_column__title
+    width 100%
+
+.rooms_block
+    display flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top 20px
+
+.search_room_page .room_wrap
+    margin-bottom 20.5px
+
+.rooms_pagination
+    display flex
+    width 100%
+    justify-content: center
+    margin-top 20px
+
+.search_room_page + .footer_wrap
+    margin-top 70px
