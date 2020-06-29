@@ -1,0 +1,53 @@
+extends layout/page
+include blocks/cards/booking/booking
+include blocks/form_elements/bullet_list/bullet_list
+include blocks/form_elements/room_details/room_details
+include blocks/form_elements/reviews/reviews
+
+block title
+   | Room details
+block content
+   main.room_details_page
+      .room_details__photos
+            .left_column_photo
+               img(src="./img/room_details/room_details_photo_1.png" alt="#")
+            .right_column_photo
+               img(src="./img/room_details/room_details_photo_2.png" alt="#")
+               img(src="./img/room_details/room_details_photo_3.png" alt="#")
+      .room_details_content
+         .room_details__info
+            .room_info_wrap
+               .room_info__left_column
+                  p.room_info__title Сведения о номере
+                  +room_details({elems: [
+                              {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
+                              {title: "Удобство", subTitle: "Окно в каждой из спален"},
+                              {title: "Уют", subTitle: "Номер оснащён камином"}
+                              ]})
+               .room_info__right_column
+                  p.room_info__title Впечатления от номера
+                  .pie_chart_wrap 
+                     h1 #
+            .room_details__reviews
+               p.room_info__title Отзывы посетителей номера
+               +reviews({items: [
+                        {likeCheck: true},
+                        {}
+                     ]})
+
+            .room_rules_wrap
+               .room_rules__left_column
+                  p.room_info__title Правила
+                  +bullet_list({ items: [
+                              { name: "Нельзя с питомцами" },
+                              { name: "Без вечеринок и мероприятий" },
+                              { name: "Время прибытия — после 13:00, а выезд до 12:00" }
+                           ]
+                        })
+
+               .room_rules__right_column
+                  p.room_info__title Отмена
+                  p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн.
+                     | до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+         +booking_card({luxury: true})
