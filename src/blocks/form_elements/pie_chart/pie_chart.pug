@@ -1,0 +1,36 @@
+mixin pie_chart(options)
+
+   .pie_chart_wrap
+      <figure>
+         <div class="figure-content">
+            <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+               <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BC9CFF" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="25"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFE39C" stroke-width="1" stroke-dasharray="50 50" stroke-dashoffset="75"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="0"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" stroke-dasharray="0.5 99.5" stroke-dashoffset="25.2"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" stroke-dasharray="0.5 99.5" stroke-dashoffset="75.2"></circle>
+               <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" stroke-dasharray="0.5 99.5" stroke-dashoffset="100.2"></circle>
+            <g class="pie_chart_text">
+               <text x="50%" y="50%" class="pie_chart_number">260</text>
+               <text x="50%" y="50%" class="pie_chart_label">голосов</text>
+            </g>
+            </svg>
+         </div>
+         <figcaption class="figure-key">
+            <ul class="figure-key-list" aria-hidden="true" role="presentation">
+               <li>
+               <span class="shape-circle shape-orange"></span> Великолепно
+               </li>
+               <li>
+               <span class="shape-circle shape-green"></span> Хорошо
+               </li>
+               <li>
+               <span class="shape-circle shape-purple"></span> Удовлетворительно
+               </li>
+               <li>
+               <span class="shape-circle shape-grey"></span> Разочарован
+               </li>
+            </ul>
+         </figcaption>
+      </figure>

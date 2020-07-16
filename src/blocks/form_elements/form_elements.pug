@@ -12,22 +12,23 @@ include ./pagination/pagination
 include ./bullet_list/bullet_list
 include ./reviews/reviews
 include ./data_dropdown/data_dropdown
+include ./pie_chart/pie_chart
 
 
 //- +text_field({title: "Text field", type:"email", placeholder: "Email"})
 //- +text_field({title: "Text field", type:"text", placeholder: "ДД.ММ.ГГГГ", isDate: true})
-+text_field({title: "Text field",  
-   elems: [
-      {type: "text", placeholder: "Text"},
-      {type: "text", placeholder: "Text"}
-   ]
-   })
+//- +text_field({title: "Text field",  
+//-    elems: [
+//-       {type: "text", placeholder: "Text"},
+//-       {type: "text", placeholder: "Text"}
+//-    ]
+//-    })
 
-+text_field({title: "subscription text field", subscription: true,
-   elems: [
-      {},
-   ]
-   })
+//- +text_field({title: "subscription text field", subscription: true,
+//-    elems: [
+//-       {},
+//-    ]
+//-    })
 
 //- +checkbox({title: "Text field"})
 //- +dropdown({title: "dropdown", headTitle: "Сколько гостей",
@@ -49,28 +50,28 @@ include ./data_dropdown/data_dropdown
 
 //- +data_dropdown({title: "filter dropdown", filter: true, id: 'data_dropdown'})
 
-+checkbox({title: "expandable checkbox list",
-            elems: ["Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь"]
-         })
+//- +checkbox({title: "expandable checkbox list",
+//-             elems: ["Завтрак", "Письменный стол", "Стул для кормления","Кроватка", "Телевизор","Шампунь", "Телевизор","Шампунь"]
+//-          })
 
-+checkbox({title: "rich Checkbox Buttons", richCheckbox: true, 
-elems: [
-   {title: "Широкий коридор", 
-   subTitle: "Ширина коридоров в номере не менее 91 см."},
+//- +checkbox({title: "rich Checkbox Buttons", richCheckbox: true, 
+//- elems: [
+//-    {title: "Широкий коридор", 
+//-    subTitle: "Ширина коридоров в номере не менее 91 см."},
 
-   {title: "Помощник для инвалидов", 
-   subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."}
-]})
+//-    {title: "Помощник для инвалидов", 
+//-    subTitle: "На 1 этаже вас встретит специалист  и проводит до номера."}
+//- ]})
 
-//- +radio_button({title: "Radio Buttons", elements: ["Мужчина", "Женщина"]})
+//- //- +radio_button({title: "Radio Buttons", elements: ["Мужчина", "Женщина"]})
 
-+room_details({elems: [
-   {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
-   {title: "Удобство", subTitle: "Окно в каждой из спален"}
-   ]})
+//- +room_details({elems: [
+//-    {title: "Комфорт", subTitle: "Шумопоглощающие стены"},
+//-    {title: "Удобство", subTitle: "Окно в каждой из спален"}
+//-    ]})
 
-+button({ border: true, name: "Войти"})
-//- +toggle({
+//- +button({ border: true, name: "Войти"})
+//- //- +toggle({
 //-    title: "Toggle", elems: [
 //-       {toggleName: "Получать спецпредложения"}
 //-       ]
@@ -81,7 +82,7 @@ elems: [
 
 //- +rate_button("rate button")
 
-+range_slider({title: "Range Slider"})
+//- +range_slider({title: "Range Slider"})
 
 //- +button({title: "Buttons", submit: true, name: "перейти к оплате"})
 //- +button({name: "click me", fill: true})
@@ -98,8 +99,10 @@ elems: [
 //-    ]
 //- })
 
-+reviews({ 
-   items: [
-      {likeCheck: true},
-      {}
-   ]})
+//- +reviews({ 
+//-    items: [
+//-       {likeCheck: true},
+//-       {}
+//-    ]})
+
++pie_chart()
