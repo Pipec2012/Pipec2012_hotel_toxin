@@ -1,13 +1,17 @@
 .pie_chart_wrap
   max-width 311px
-  max-height: 311px
+  max-height: 126px
   display flex
 
 .figure-content
-  max-width 158px
-  // margin: -19px
+  max-width 120px
+  min-width 110px
+
 .donut-segment
   box-sizing: border-box
+
+svg.donut
+  width 132%
 
 .pie_chart_text
   fill: #BC9CFF;
@@ -53,6 +57,7 @@ figure
 
 .figure-key
   min-width: calc(8 / 12);
+  margin-left 40px
 
 .figure-key [class*="shape-"]
   margin-right: 6px;
@@ -67,13 +72,12 @@ figure
   padding: 0;
 
 .shape-circle
-   display: inline-block;
-   vertical-align: middle;
-   width: 10px;
-   height: 10px;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   border-radius: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 
 .shape-orange
   background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);

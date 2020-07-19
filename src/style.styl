@@ -175,6 +175,13 @@ html
     img 
         width 100%
         height 100%
+
+.room_info__title + .room_details__wrap
+    margin-top 20px
+
+.room_info__title + .pie_chart_wrap
+    margin-top 20px
+
 .right_column_photo
     display flex
     flex-wrap: wrap
@@ -195,6 +202,17 @@ html
     display: flex
     justify-content: space-between
 
+.room_info__title-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    max-width 712px
+    margin-bottom 20px
+
+.room_info__reviews
+    color: $black--50
+
+
 .room_info__left_column
     flex-basis 50%
 
@@ -204,7 +222,6 @@ html
 .room_info__title
     font-size: 1.7143rem
     bold()
-    margin-bottom 20px
 
 .room_details__reviews
     margin-top 30px
@@ -219,3 +236,8 @@ html
 
 .room_rules__right_column
     flex-basis 50%
+    max-width 341px
+
+.room_info__text
+    margin-top 20px
+    line-height: 24px;

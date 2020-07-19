@@ -3,6 +3,7 @@ include blocks/cards/booking/booking
 include blocks/form_elements/bullet_list/bullet_list
 include blocks/form_elements/room_details/room_details
 include blocks/form_elements/reviews/reviews
+include blocks/form_elements/pie_chart/pie_chart
 
 block title
    | Room details
@@ -26,13 +27,19 @@ block content
                               ]})
                .room_info__right_column
                   p.room_info__title Впечатления от номера
-                  .pie_chart_wrap 
-                     h1 #
+                  +pie_chart()
             .room_details__reviews
-               p.room_info__title Отзывы посетителей номера
+               .room_info__title-wrap
+                  p.room_info__title Отзывы посетителей номера
+                  p.room_info__reviews 2 отзыва
                +reviews({items: [
                         {likeCheck: true},
-                        {}
+                        
+                        {quanityLikes: 2,
+                        userName: "Патрисия Стёклышкова",
+                        reviewData: "Неделю назад",
+                        reviewText: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                        }
                      ]})
 
             .room_rules_wrap
@@ -47,7 +54,7 @@ block content
 
                .room_rules__right_column
                   p.room_info__title Отмена
-                  p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн.
+                  p.room_info__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн.
                      | до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
          +booking_card({luxury: true})

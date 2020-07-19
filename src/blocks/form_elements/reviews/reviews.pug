@@ -10,7 +10,7 @@ mixin reviews(options)
                .user__block
                   .user__photo
                      img(src="./blocks/form_elements/reviews/img/reviews_user__photo" + i + ".png", alt="user photo")
-                  +like_button({check: item.likeCheck})
+                  +like_button({check: item.likeCheck, quanity: item.quanityLikes})
                   
                .reviews__block
                   .user__info

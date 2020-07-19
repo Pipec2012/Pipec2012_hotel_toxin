@@ -7,10 +7,14 @@
    justify-content: space-between
    width 100%
 
+.reviews__option:not(:first-child)
+   margin-top 22px
+
 .user__block
    display flex
    flex-wrap: wrap
    justify-content: center
+   align-content: flex-start
    
 .reviews__block
    max-width 650px
@@ -23,8 +27,8 @@
       border-radius: 50%
       border: 2px solid white
       box-sizing: border-box
-.like_button_wrap
-   margin-top -20px
+.user__photo + .like_button_wrap
+   margin-top 12px
 
 .user_name
    margin-top 4px
