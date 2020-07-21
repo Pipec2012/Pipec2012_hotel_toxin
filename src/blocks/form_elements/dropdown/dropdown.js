@@ -1,73 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => { 
 
+   var dropdownArrow = document.querySelectorAll('.dropdown__arrow'),
+      dropdownBtnApply = document.querySelectorAll('.dropdown__wrap .text__btn');
 
-var dropdownArrow = document.querySelectorAll('.dropdown__arrow');
+   dropdownBtnApply.forEach((element) => {
+      element.addEventListener('click', (e) => {
+         e.target.closest(".dropdown__options").classList.remove('dropdown--active');
+         document.querySelector('.dropdown__head').classList.remove('dropdown__head--active');
+      });
+   });
 
-dropdownArrow.forEach((element) => {
-   element.onclick = showDropdown;
-});
+   dropdownArrow.forEach((element) => {
+      element.addEventListener('click', (e) => {
+         let dropdownWrap =  e.target.closest(".dropdown__wrap").querySelector('.dropdown__options'),
+            dropdownHead = e.target.closest(".dropdown__wrap").querySelector('.dropdown__head');
 
-function showDropdown() {
+         dropdownWrap.classList.toggle('dropdown--active');
 
-   
-   var dropdown_body = this.parentElement.nextSibling;
-   let checkClass = dropdown_body.classList.contains('dropdown--hidden');
+         if (dropdownWrap.classList.contains('dropdown--active')) {
+            dropdownHead.classList.add('dropdown__head--active');
+         } else {
+            dropdownHead.classList.remove('dropdown__head--active');
+         }
+      });
+   });
 
+   const btn_plus = document.querySelectorAll('.btn_plus'),
+      btn_minus = document.querySelectorAll('.btn_minus');
+
+      btn_plus.forEach((element) => {
+      element.onclick = quantityValueUp;
+   });
+
+   function quantityValueUp(event) {
+      let quantityVulue = this.previousSibling,
+         btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
       
-      var dropdown_head = this.parentElement;
-      if (checkClass) {
-         dropdown_head.classList.add('dropdown--active');
-         dropdown_body.classList.remove('dropdown--hidden');
-      } else { 
-         dropdown_body.classList.add('dropdown--hidden');
-         dropdown_head.classList.remove('dropdown--active');
+      this.previousSibling.previousSibling.classList.remove('disabled');
+      
+      btnClear.classList.remove('hidden');
+      quantityVulue.value ++;
+   
+   }
+
+   btn_minus.forEach((element) => {
+      element.onclick = quantityValueDown;
+   });
+
+   function quantityValueDown() {
+      let quantityVulue = this.nextSibling;
+      
+      if (this.nextSibling.value > 0) {
+         quantityVulue.value --;
       }
       
-}
-
-const btn_plus = document.querySelectorAll('.btn_plus'),
-   btn_minus = document.querySelectorAll('.btn_minus');
-
-   btn_plus.forEach((element) => {
-   element.onclick = quantityValueUp;
-});
-
-function quantityValueUp(event) {
-   let quantityVulue = this.previousSibling,
-      btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
-   
-   this.previousSibling.previousSibling.classList.remove('disabled');
-   
-   btnClear.classList.remove('hidden');
-   quantityVulue.value ++;
-  
-}
-
-btn_minus.forEach((element) => {
-   element.onclick = quantityValueDown;
-});
-
-function quantityValueDown() {
-   let quantityVulue = this.nextSibling;
-   
-   if (this.nextSibling.value > 0) {
+      if(this.nextSibling.value == 0){
+         this.classList.add('disabled');
+      } 
       
-      quantityVulue.value --;
-      
+      if (this.closest('.dropdown__options').querySelector('.btn_minus:not(.disabled)') === null ) {
+         let btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
+         btnClear.classList.add('hidden');
+      } 
+   
    }
-   
-   if(this.nextSibling.value == 0){
-
-      this.classList.add('disabled');
-   } 
-   
-   if (this.closest('.dropdown__options').querySelector('.btn_minus:not(.disabled)') === null ) {
-      let btnClear = this.closest('.dropdown__options').querySelector('.dropdown__clear');
-      btnClear.classList.add('hidden');
-   } 
-  
-}
-   
 
    event.target.addEventListener('click', (e) => { 
       
@@ -82,11 +78,7 @@ function quantityValueDown() {
             clearButton.classList.add('hidden');
          });
       }
-   
-      });
 
-
-   
-
+   });
 
 });
