@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
    dropdownBtnApply.forEach((element) => {
       element.addEventListener('click', (e) => {
          e.target.closest(".dropdown__options").classList.remove('dropdown--active');
-         document.querySelector('.dropdown__head').classList.remove('dropdown__head--active');
+         e.target.closest(".dropdown__wrap").querySelector('.dropdown__head').classList.remove('dropdown__head--active');
       });
    });
 
