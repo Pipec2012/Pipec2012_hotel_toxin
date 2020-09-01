@@ -33,25 +33,28 @@ mixin footer(options)
                      p= options.logoText ? options.logoText : "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
                .footer_navigation__block
                   ul.footer_navigation__column
-                     li.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "Navigation"
+                     li
+                        h3.footer_navigation__title= options.columnTitile_1 ? options.columnTitile_1 : "Navigation"
                      each elem in options.elems_nav
                         li.footer_navigation__link
                            a(href="#")= elem
 
                   ul.footer_navigation__column
-                     li.footer_navigation__title= options.columnTitile_2 ? options.columnTitile_2 : "ABOUT US"
+                     li
+                        h3.footer_navigation__title= options.columnTitile_2 ? options.columnTitile_2 : "ABOUT US"
                      each elem in options.elems_about_us
                         li.footer_navigation__link
                            a(href="#")= elem
 
                   ul.footer_navigation__column
-                     li.footer_navigation__title= options.columnTitile_3 ? options.columnTitile_3 : "Support"
+                     li
+                        h3.footer_navigation__title= options.columnTitile_3 ? options.columnTitile_3 : "Support"
                      each elem in options.elems_Support
                         li.footer_navigation__link
                            a(href="#")= elem
 
                .footer_subscribe__block
-                  p.footer_subscribe__title=options.subscribeTitle ? options.subscribeTitle : "Subscribe to our newsletter"
+                  h3.footer_subscribe__title=options.subscribeTitle ? options.subscribeTitle : "Subscribe to our newsletter"
                   p.footer_subscribe__text=options.subscribeText ? options.subscribeText : "Receive our latest news and promotions in your inbox!"
                   +text_field({ subscription: true, 
                                  elems: [

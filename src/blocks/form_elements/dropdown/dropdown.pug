@@ -2,7 +2,8 @@ include ../../form_elements/buttons/buttons
 
 mixin dropdown(options)
 	.dropdown__wrap(class=options.big ? "dropdown__large" : "")
-		.dropdown__title= options.title
+		.dropdown__title
+			h3= options.title
 		.dropdown__head
 			.head__title= options.headTitle
 			i.material-icons.dropdown__arrow expand_more
@@ -11,7 +12,7 @@ mixin dropdown(options)
 
 			each elem in options.elems 
 				li.dropdown__option
-					span.option__name= elem.name
+					h3.option__name= elem.name
 					.calc
 						button(type="button").calc__btn.btn_minus.disabled
 							i.material-icons remove

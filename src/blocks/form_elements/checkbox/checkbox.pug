@@ -9,7 +9,8 @@ mixin checkbox(options)
    if (options.notDropdown === true)
    
       .checkbox_wrap
-         .checkbox__title= options.title
+         .checkbox__title
+            h3= options.title
          ul.checkbox__options
             each elem in options.elems
                li
@@ -21,7 +22,8 @@ mixin checkbox(options)
                      = elem
    else if (options.richCheckbox === true)
       .rich_checkbox_wrap
-         .rich_checkbox__title= options.title
+         .rich_checkbox__title
+            h3= options.title
          ul.rich_checkbox__options
             each elem in options.elems
                li
@@ -36,7 +38,8 @@ mixin checkbox(options)
    else 
       .dropdown_checkbox_wrap
          .checkbox__head
-            .checkbox__title= options.title
+            .checkbox__title
+               h3= options.title
                i.material-icons.checkbox__arrow expand_more
          ul.checkbox__options(class= options.checkboxOpen ? "" : "checkbox--hidden checkbox__arrow--rotate")
             each elem in options.elems

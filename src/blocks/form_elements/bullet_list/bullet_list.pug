@@ -1,7 +1,8 @@
 mixin bullet_list(options)
 
    .bullet_list__wrap
-      .bullet_list__title= options.title
+      .bullet_list__title
+         h3= options.title
       ul.bullet_list__options
          each item in options.items
             li.bullet_list__option

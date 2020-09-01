@@ -1,12 +1,8 @@
 .button_wrap
-   font-size: 0.8571rem
    height: 44px
 
 .button__title
-   bold()
-   uppercase()
    margin-bottom 15px
-   font-size: 0.8571rem
 
 .button_body
    height: 100%;
@@ -16,13 +12,13 @@
 /* Текстовая кнопка  */
 .button_text_wrap
    height 15px
+   
 .text__btn
-   uppercase()
-   bold()
-   color: $purple
-   cursor pointer
+   h3
+      color: $purple
+      cursor pointer
 
-.text__btn:hover
+.text__btn h3:hover
    color: $black--50
 
  /* кнопка для отправки данных со стрелкой */
@@ -30,10 +26,7 @@
 .buttton__submit
    width 320px
    height: 100%;
-   cursor pointer
-   bold()
-   uppercase()
-   
+   cursor pointer 
    gradient()
    border-radius: 22px;
    display flex
@@ -41,6 +34,8 @@
    justify-content: center
    color: white
    position relative
+   h3
+      color: white
 
 .buttton__submit .material-icons
    right  15px

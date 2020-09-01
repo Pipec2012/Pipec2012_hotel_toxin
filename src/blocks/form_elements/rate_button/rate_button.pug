@@ -12,7 +12,7 @@ mixin rate_button(options)
             
       else
          .rate_button_head
-            .rate_button__title= options.title
+            h3.rate_button__title= options.title
          .rate_button_body
             -for(let b = 0; b < starsQuantity; b++) {
                i.material-icons.rate_star(class= (starsActive - 1 == b) ? "active" : "")

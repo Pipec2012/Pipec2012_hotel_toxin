@@ -13,11 +13,10 @@
 
 //Фильтр дат
 .filter_dropdown__title
-   bold()
-   uppercase()
+   font-size-title()
    max-width 265px
    position relative
-   font-size: 0.8571rem
+   
 
 .filter_dropdown__input
    margin-top 5px
@@ -33,11 +32,9 @@
 //Диапазон дат
 .data_dropdown__title
    max-width 150px
-   bold()
-   uppercase()
+   font-size-title()
    margin-right 20px
    position relative
-   font-size: 0.8571rem
 
 .data_dropdown__title:last-child
    margin-right 0
@@ -57,27 +54,28 @@
 
 // Общие стили
 .datepicker 
-   font-size: 0.8571rem
+   font-size-12()
    width: 320px;
    height: 369px;
    font-family: 'Quicksand-Regular','Montserrat-Regular', sans-serif
    
 .datepicker--nav-title
    bold()
-   font-size: 1.3571rem
+   font-size-19()
 
 .datepicker--nav
    border-bottom: none
 
 .datepicker--content
    margin-top 15px
+
 .datepicker--days-names
    width 90%
    margin: 0 auto 
    justify-content: center
 
 .datepicker--day-name
-   font-size: 0.8571rem
+   font-size-12()
    text-transform: none
 .datepicker--day-name,.datepicker--button-apply
    bold()
@@ -88,6 +86,7 @@
    margin-top 15px
    justify-content: center
    height: 230px;
+
 .datepicker--cell
    width: 40.14px;
    height: 40.44px;

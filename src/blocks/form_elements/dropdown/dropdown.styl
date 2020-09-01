@@ -3,12 +3,8 @@
    max-width 266px
    position relative
    z-index 99
-   font-size: 0.8571rem
 
 .dropdown__title
-   bold()
-   uppercase()
-   font-size: 0.8571rem
    margin-bottom 5px
 
 .option__name
@@ -51,7 +47,6 @@
    position: absolute
    background: white
    width: 100%
-   // max-height: 160px;
    border: 1px solid $black--50
    border-top: inherit
    box-sizing: border-box;
@@ -73,7 +68,6 @@
    align-items: center
    justify-content space-between
    margin-bottom 7px
-   font-size: 0.8571rem
    
 .calc
    display flex
@@ -85,14 +79,15 @@
       text-align: center
       border: none
       background: none
+
 .dropdown__controls
    margin-top 20px
    display flex
    align-items: center
    justify-content space-between
    font-weight: bold
-   font-size: 12px
-   text-transform: uppercase
+   uppercase()
+   font-size-12()
    span 
       cursor pointer
 
