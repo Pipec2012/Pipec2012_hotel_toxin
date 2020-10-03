@@ -24,3 +24,22 @@ mixin header(options)
 					+button({border: true, name: "Войти", linkName: "http://localhost:8080/sign_in_page.html"})
 
 					+button({name: "Зарегистироваться", fill: true, linkName: "http://localhost:8080/registration_page.html"})
+				span.material-icons.btn_burger-menu menu
+			
+			.header_mobile_navbar__block.display-none
+					span.material-icons.btn_close-menu close
+					nav.navbar_mobile_wrapper
+						ul
+							each elem in options.elems    
+								li
+									a.navbar__link(href="#")= elem.menuName ? elem.menuName : "О нас"
+										-  if(elem.dropdown === true)
+											i.material-icons.navbar__arrow expand_more
+							
+					.navbar_mobile_user__logged(class= options.userLogin ? "" : "-hidden-")
+						p Юлий Цезарь
+			
+					.navbar_mobile_login__block(class= options.userLogin ? "-hidden-" : "")
+						+button({border: true, name: "Войти", linkName: "http://localhost:8080/sign_in_page.html"})
+
+						+button({name: "Зарегистироваться", fill: true, linkName: "http://localhost:8080/registration_page.html"})
