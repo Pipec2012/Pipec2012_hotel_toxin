@@ -23,10 +23,10 @@ a
     color: black
 
 button 
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
   background-color: transparent
 
 html
@@ -42,23 +42,29 @@ html
     max-width 1920px
     margin: 0 auto
     height 830px
-    background: url(img/landing_page.png) no-repeat center;
-    background-size: cover;
+    background: url(img/landing_page.png) no-repeat center
+    background-size: cover
 
 .landing_content
     max-width 1160px
     margin: 0 auto
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     padding: 0 20px
 
 .landing_wrap .room_search_card__wrap
     margin-top 70px
 
+.landing_text_wrap
+    width 100%
+    display: flex
+    justify-content: flex-end
+
 .landing_text
-    margin-top 764px
+    margin-top 320px
     max-width 297px
-    text-align: right 
+    text-align: right
 
 /* --- Sign in page --- */
 
@@ -67,8 +73,8 @@ html
     max-width 1920px
     margin: 0 auto
     height 703px
-    background: url(img/registr_sign_in_bgr.png) no-repeat center;
-    background-size: cover;
+    background: url(img/registr_sign_in_bgr.png) no-repeat center
+    background-size: cover
 
 .sign_in_content
     max-width 1160px
@@ -86,7 +92,7 @@ html
     max-width 1920px
     margin: 0 auto
     height 703px
-    background: url(img/registr_sign_in_bgr.png) no-repeat center;
+    background: url(img/registr_sign_in_bgr.png) no-repeat center
     background-size: cover;
 
 .registration_content
@@ -241,4 +247,4 @@ html
 
 .room_info__text
     margin-top 20px
-    line-height: 24px;
+    line-height: 24px

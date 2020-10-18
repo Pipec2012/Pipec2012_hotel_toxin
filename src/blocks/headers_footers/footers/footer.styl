@@ -4,15 +4,18 @@
    box-sizing: border-box;
    
 .footer_widgets_wrap
-   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1)
 
 .footer_widgets
    display: flex
    align-content: flex-start
-   height 272px
-   max-width 1160px
+   justify-content: space-between
+   height 372px
+   width 100%
+   max-width 1200px
    margin 0 auto
    padding: 100px 20px 0 20px
+   box-sizing: border-box
 
 .footer_logo__block
    display: flex
@@ -25,8 +28,9 @@
    margin-top 20px
 
 .footer_navigation__block
-   margin-left 40px
    width 100%
+   max-width 550px
+   padding: 0 10px
    display: flex
    justify-content: space-between
 
@@ -43,7 +47,6 @@
    color: $purple
 
 .footer_subscribe__block
-   margin-left 87px
    max-width 260px
 
 .footer_subscribe__text
@@ -77,11 +80,10 @@
    margin-right 20px
 
 .social_icons__item i
-   font-size: 1.7143rem;
+   font-size: 1.7143rem
    gradient()
    -webkit-background-clip: text
    color: transparent 
-
 
 /* footer creative */
 
@@ -94,7 +96,7 @@
    justify-content: center
    margin: 0 auto
    align-content: flex-start;
-   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
 
 .footer_creative_wrap .footer_logo__wrap
    margin-top 100px
@@ -106,3 +108,79 @@
    
 .footer_creative__social_icons
    margin-top 25px
+
+@media screen and (max-width: 1000px) {
+  .footer_widgets {
+      display: grid
+      height: 100%
+      grid-row-gap: 20px
+      margin: 0 auto
+      grid-template-areas: 
+      "logo logo subscribe" "nivigation nivigation nivigation"
+      grid-template-columns: 1fr 1fr
+  }
+
+  .footer_navigation__block {
+   max-width none;
+   padding: 0;
+   }
+
+  .footer_logo__block {
+   grid-area: logo;
+   }
+
+   .footer_navigation__block {
+   grid-area: nivigation;
+   }
+
+   .footer_subscribe__block {
+   grid-area: subscribe;
+   }
+
+   .footer_widgets_wrap {
+   padding-bottom 20px  
+   }
+}
+
+@media screen and (max-width: 550px) {
+  .footer_widgets {
+      display: grid
+      height: 100%
+      grid-row-gap: 20px;
+      margin: 0 auto
+      grid-template-areas: 
+      "logo" "nivigation" "subscribe";
+      grid-template-columns: 1fr;
+  }
+
+  .footer_navigation__block {
+      max-width none
+   }
+
+  .footer_logo__block {
+      grid-area: logo;
+      justify-content: center;
+      max-width 100%;
+   }
+
+   .footer_navigation__block {
+      grid-area: nivigation;
+      padding: 0;
+      flex-wrap: wrap;
+   .footer_navigation__column{
+      width 100%
+      text-align: center;
+      margin-bottom 20px;
+   }
+   .footer_navigation__link {
+      margin-top: 7px;
+   }
+   }
+
+   .footer_subscribe__block {
+      grid-area: subscribe;
+      justify-content: center;
+      max-width 100%;
+   }
+}
+
