@@ -1,29 +1,28 @@
 .data_dropdown__wrap
    max-height: 65px
-   width 100%
-   max-width: 320px
 
 .data_dropdown__body
    display flex
-   justify-content: space-between
    
 .data_dropdown__arrow
    position absolute
-   right: 10px
-   top: 50%
+   right: 10px;
+   top: 50%;
    color: $black--50
 
 //Фильтр дат
 .filter_dropdown__title
-   font-size-title()
+   bold()
+   uppercase()
    max-width 265px
    position relative
+   font-size: 0.8571rem
 
 .filter_dropdown__input
    margin-top 5px
-   width 100%
-   max-width: 266px
+   width: 266px
    height: 44px
+
    border: 1px solid $black--25
    box-sizing: border-box
    border-radius: 4px
@@ -33,35 +32,38 @@
 //Диапазон дат
 .data_dropdown__title
    max-width 150px
-   font-size-title()
+   bold()
+   uppercase()
+   margin-right 20px
    position relative
+   font-size: 0.8571rem
 
-.data_dropdown__title:not(:last-child)
-   padding-right: 5px
+.data_dropdown__title:last-child
+   margin-right 0
 
 .data_dropdown__input
    margin-top 5px
-   width 100%
-   max-width: 150px
-   height: 44px
+   width: 150px;
+   height: 44px;
+  
    border: 1px solid $black--25
    box-sizing: border-box
    border-radius: 4px
    padding: 10px 15px
+   
 
 // Стили календаря
 
 // Общие стили
 .datepicker 
-   font-size-12()
-   width: 100%
-   max-width 320px
+   font-size: 0.8571rem
+   width: 320px
    height: 369px
    font-family: 'Quicksand-Regular','Montserrat-Regular', sans-serif
    
 .datepicker--nav-title
    bold()
-   font-size-19()
+   font-size: 1.3571rem
 
 .datepicker--nav
    border-bottom: none
@@ -75,8 +77,9 @@
    justify-content: center
 
 .datepicker--day-name
-   font-size-12()
+   font-size: 0.8571rem
    text-transform: none
+
 .datepicker--day-name,.datepicker--button-apply
    bold()
 
@@ -85,8 +88,8 @@
 .datepicker--cells
    margin-top 15px
    justify-content: center
-   height: 230px
-
+   height: 210px
+   
 .datepicker--cell
    width: 40.14px
    height: 40.44px
@@ -115,7 +118,7 @@
 .-range-from-.-selected-:hover,.-range-to-.-selected-:hover
    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
    border-radius: 50%
-   opacity: 0.5
+   opacity: 0.5;
 
 // Выбор диапазона
 .-range-from-.-selected-:after
@@ -136,7 +139,7 @@
    height 100%
    position absolute
    z-index -2
-   border-radius: 50% 100px 100px 50%
+   border-radius: 50% 100px 100px 50%;
 
 .datepicker--cell.-current-.-in-range-
    width: 39.88px
@@ -159,10 +162,14 @@
 // Стили Кнопок
 .datepicker--buttons
    border: none
-   margin-top 5px
+   margin-top 10px
+   display: flex
+   justify-content: space-between
+   
 .datepicker--button
    bold()
    uppercase()
+   max-width 120px
    color: $black--50
 
 .datapicker_arrow,.datepicker--day-name,.datepicker--button-apply

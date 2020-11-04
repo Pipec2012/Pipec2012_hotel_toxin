@@ -11,7 +11,8 @@ block title
 block content
    main.search_room_page
       .search_room_content
-         .filter_column
+         .filter_column.mobile_filter_slide
+            span.material-icons.mobile_filter_close close
             +data_dropdown({title: "даты пребывания в отеле", filter: true, id: 'data_dropdown'})
             +dropdown({title: "Гости", headTitle: "Сколько гостей",
                         elems: [
@@ -47,6 +48,9 @@ block content
          .rooms_column
             .rooms_column__title
                h1 Номера, которые мы для вас подобрали
+            .rooms_mobile_block
+               a.rooms_mobile__btn(href="#") Фильтры
+                  span.material-icons tune
             .rooms_block
                +room({elems: [
                      {luxury: true},

@@ -172,24 +172,26 @@ html
 .filter_column
     display flex
     flex-wrap: wrap
-    width 266px
+    width 100%
+    max-width 266px
     align-content: flex-start
 
 .filter_column>div
     margin-top 30px
 
-.filter_column>div:first-child
+.filter_column>div:first-child, .filter_column>div:nth-child(2)
     margin-top 0
 
-.filter_column>div:nth-child(2)
+.filter_column>div:nth-child(3)
     margin-top 20px
 
 .rooms_column
     width 100%
+    max-width: 830px
     display flex
     flex-wrap: wrap
     justify-content: space-between
-    margin-left 60px
+    padding-left: 10px
 
 .rooms_column__title
     width 100%
@@ -211,6 +213,70 @@ html
 
 .search_room_page + .footer_wrap
     margin-top 70px
+
+.rooms_mobile__btn
+    display none
+    align-content: center
+    justify-content: space-between
+    width: 100px
+    bold()
+    margin-top: 20px
+
+.mobile_filter_close
+    position: absolute
+    left: 265px
+    display: none
+
+@media screen and (max-width: 1150px) {
+    .filter_column {
+        position absolute
+        left 20px
+        top: 150px
+        background: $white
+        height 100%
+        z-index 1
+        padding 0 20px 0 0
+        transition(0.5s)
+    }
+
+    .search_room_content {
+        justify-content: center    
+    }
+    
+    .rooms_mobile__btn {
+        display flex
+    }
+    
+    .mobile_filter_slide {
+        left -320px
+    }
+    
+    .mobile_filter_close {
+        display block    
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .search_room_content .room_wrap {
+        padding: 0 5px
+    }
+
+    .rooms_block {
+        justify-content: center 
+    }
+
+    .rooms_column {
+        padding-left: 0    
+    }
+    
+}
+
+@media screen and (max-width: 569px) {
+    .filter_column {
+        top: 180px
+    }
+    
+}
 
 /* --- Room details --- */
 
