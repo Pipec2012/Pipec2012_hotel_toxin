@@ -13,10 +13,12 @@ var roomSearchFilterBnt = document.querySelector('.rooms_mobile__btn'),
     roomSearchFilterClose = document.querySelector('.mobile_filter_close'),
     filterBlock = document.querySelector('.filter_column');
 
-roomSearchFilterBnt.addEventListener('click', () => {
-    filterBlock.classList.remove('mobile_filter_slide');
-})
-
-roomSearchFilterClose.addEventListener('click', () => {
-    filterBlock.classList.add('mobile_filter_slide');
-})
+if (roomSearchFilterBnt !== null) {
+    roomSearchFilterBnt.addEventListener('click', () => {
+        filterBlock.classList.remove('mobile_filter_slide');
+    })
+    
+    roomSearchFilterClose.addEventListener('click', () => {
+        filterBlock.classList.add('mobile_filter_slide');
+    })
+}

@@ -1,13 +1,17 @@
 .data_dropdown__wrap
    max-height: 65px
+   width 100%
+   max-width 320px
 
 .data_dropdown__body
    display flex
+   justify-content: space-between
+   width 100%
    
 .data_dropdown__arrow
    position absolute
-   right: 10px;
-   top: 50%;
+   right: 10px
+   top: 50%
    color: $black--50
 
 //Фильтр дат
@@ -22,7 +26,6 @@
    margin-top 5px
    width: 266px
    height: 44px
-
    border: 1px solid $black--25
    box-sizing: border-box
    border-radius: 4px
@@ -34,18 +37,20 @@
    max-width 150px
    bold()
    uppercase()
-   margin-right 20px
    position relative
    font-size: 0.8571rem
+
+.data_dropdown__title:first-child
+   padding-right 5px
 
 .data_dropdown__title:last-child
    margin-right 0
 
 .data_dropdown__input
    margin-top 5px
-   width: 150px;
-   height: 44px;
-  
+   width 100%
+   max-width: 150px
+   height: 44px
    border: 1px solid $black--25
    box-sizing: border-box
    border-radius: 4px
@@ -111,7 +116,7 @@
    color: white
    border-radius: 50%
 
-.-range-from-.-selected-,.-range-to-.-selected-
+.-range-from-.-selected-,.-range-to-.-selected-,.datepicker--cell.-selected-.-focus-
    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
    border-radius: 50%
 
@@ -177,3 +182,10 @@
 
 .datepicker--button-apply:hover
    color: $black--50
+
+
+@media screen and (max-width: 345px) {
+   .datepicker  {
+      left 0!important
+   }
+}

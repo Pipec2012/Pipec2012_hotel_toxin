@@ -300,6 +300,9 @@ html
         width 100%
         height 100%
 
+.room_details__info
+    max-width: 712px
+
 .room_info__title + .room_details__wrap
     margin-top 20px
 
@@ -329,22 +332,15 @@ html
 .room_info__title-wrap
     display: flex
     justify-content: space-between
-    align-items: flex-end
-    max-width 712px
+    align-items: baseline
     margin-bottom 20px
 
 .room_info__reviews
     color: $black--50
-
-
-.room_info__left_column
-    flex-basis 50%
-
-.room_info__right_column
-    flex-basis 50%
+    padding-right: 10px
     
 .room_info__title
-    font-size: 1.7143rem
+    font-size-24()
     bold()
 
 .room_details__reviews
@@ -355,13 +351,92 @@ html
     display: flex
     justify-content: space-between
 
-.room_rules__left_column
-    flex-basis 50%
-
-.room_rules__right_column
-    flex-basis 50%
-    max-width 341px
+.room_rules__right_column, .room_rules__left_column
+    max-width 50%
 
 .room_info__text
     margin-top 20px
     line-height: 24px
+
+@media screen and (max-width: 1050px) {
+  .room_details_content {
+    display: grid
+    grid-row-gap: 40px
+    margin-top 40px
+    grid-template-areas: 
+    "booking_card booking_card" "details__info details__info"
+    grid-template-columns: 1fr 1fr
+    justify-items: center
+  }
+
+  .booking_card__wrap {
+      grid-area: booking_card;
+   }
+
+  .room_details__info {
+      grid-area: details__info;
+   }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .room_details__photos {
+        height auto  
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .room_rules_wrap {
+        margin: 30px auto 0 auto
+    }
+    
+    .room_info_wrap {
+        flex-wrap: wrap
+        justify-content: center
+    }
+
+    .room_info__left_column, .room_info__right_column {
+        padding 0 20px
+        margin-bottom 40px
+    }
+
+    .room_rules_wrap {
+        flex-wrap: wrap
+        justify-content: center
+    }
+    
+    .room_rules__right_column, .room_rules__left_column {
+        box-sizing: content-box
+        width 100%
+        max-width 320px
+    }
+
+    .room_rules__left_column {
+        margin-bottom 40px
+    }
+
+    .room_details__reviews {
+        width 90%
+        margin: auto    
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .room_info__title-wrap {
+        flex-wrap: wrap  
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .room_details__reviews {
+        width 95% 
+    }
+
+    .room_rules_wrap {
+        width 95% 
+    }
+
+    .room_details_content {
+        padding 0  
+    }
+}
