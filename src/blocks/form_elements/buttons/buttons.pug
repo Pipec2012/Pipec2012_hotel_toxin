@@ -5,9 +5,10 @@ mixin button(options)
             .button_head
                h3(class= options.title ? "button__title" : "")= options.title ? options.title : ""
             .button_body
-               button(type="submit").buttton__submit
-                  h3=options.name
-                  i.material-icons arrow_forward
+               a(href=options.linkName ? options.linkName : "#")
+                  button(type="button").buttton__submit
+                     h3=options.name
+                     i.material-icons arrow_forward
       
       else if (options.border === true)  /* кнопка с рамкой для перехода или отрытия событий */
          .button_border_wrap.button_wrap
