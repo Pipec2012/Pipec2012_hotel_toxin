@@ -98,31 +98,31 @@ module: {
 
     plugins: [
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
             template: PATH.source + '/landing_page.pug',
             filename: './landing_page.html',
         }),
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
             template: PATH.source + '/registration_page.pug',
             filename: './registration_page.html'
         }),
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
             template: PATH.source + '/sign_in_page.pug',
             filename: './sign_in_page.html'
         }),
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
             template: PATH.source + '/room_details_page.pug',
             filename: './room_details_page.html'
         }),
         new HtmlWebpackPlugin({
-            // inject: false,
+            inject: false,
             // hash: true,
             template: PATH.source + '/search_room_page.pug',
             filename: './search_room_page.html'
