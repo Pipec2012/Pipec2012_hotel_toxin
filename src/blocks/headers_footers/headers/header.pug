@@ -21,9 +21,9 @@ mixin header(options)
 				.navbar_user__logged(class= options.userLogin ? "" : "-hidden-") Юлий Цезарь
 		
 				.navbar_login__block(class= options.userLogin ? "-hidden-" : "")
-					+button({border: true, name: "Войти", linkName: "./sign_in_page.html"})
+					+button({border: true, name: "Войти", linkName: "./sign_in.html"})
 
-					+button({name: "Зарегистироваться", fill: true, linkName: "./registration_page.html"})
+					+button({name: "Зарегистироваться", fill: true, linkName: "./registration.html"})
 				span.material-icons.btn_burger-menu menu
 			
 			.header_mobile_navbar__block.display-none
@@ -40,6 +40,6 @@ mixin header(options)
 						p Юлий Цезарь
 			
 					.navbar_mobile_login__block(class= options.userLogin ? "-hidden-" : "")
-						+button({border: true, name: "Войти", linkName: "./sign_in_page.html"})
+						+button({border: true, name: "Войти", linkName: "./sign_in.html"})
 
-						+button({name: "Зарегистироваться", fill: true, linkName: "./registration_page.html"})
+						+button({name: "Зарегистироваться", fill: true, linkName: "./registration.html"})

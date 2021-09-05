@@ -10,14 +10,14 @@ mixin room(options)
       .room_wrap
          .room_photo__slider
             - for(let i= 1; i < amountPhotos + 1; i++ )
-               a.room_details__link(href=elem.linkName ? elem.linkName : "./room_details_page.html")   
+               a.room_details__link(href=elem.linkName ? elem.linkName : "./room_details.html")   
                   img(src=(`./blocks/cards/room/img/${roomNumber}/room_${roomNumber}__photo_${i}.png`), alt="фото номера")
                
          .room_info
             ul
                li.room_info__item
                   p.room_number__block
-                     a.room_details__link(href=elem.linkName ? elem.linkName : "./room_details_page.html")  
+                     a.room_details__link(href=elem.linkName ? elem.linkName : "./room_details.html")  
                         span № 
                         span.room_number= roomNumber
                            span(class = elem.luxury ? "room_number__lux" : "")= elem.luxury ? " люкс" : ""

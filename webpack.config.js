@@ -100,32 +100,32 @@ module: {
         new HtmlWebpackPlugin({
             inject: false,
             // hash: true,
-            template: PATH.source + '/landing_page.pug',
-            filename: './landing_page.html',
+            template: PATH.source + '/landing.pug',
+            filename: './landing.html',
         }),
         new HtmlWebpackPlugin({
             inject: false,
             // hash: true,
-            template: PATH.source + '/registration_page.pug',
-            filename: './registration_page.html'
+            template: PATH.source + '/registration.pug',
+            filename: './registration.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             // hash: true,
-            template: PATH.source + '/sign_in_page.pug',
-            filename: './sign_in_page.html'
+            template: PATH.source + '/sign_in.pug',
+            filename: './sign_in.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             // hash: true,
-            template: PATH.source + '/room_details_page.pug',
-            filename: './room_details_page.html'
+            template: PATH.source + '/room_details.pug',
+            filename: './room_details.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             // hash: true,
-            template: PATH.source + '/search_room_page.pug',
-            filename: './search_room_page.html'
+            template: PATH.source + '/search_room.pug',
+            filename: './search_room.html'
         }),
         new HtmlWebpackPlugin({
             // inject: false,
